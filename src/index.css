@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "MarkPro";
+  font-weight: 700;
+  src: url("/MarkPro-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MarkPro";
+  font-weight: 500;
+  src: url("/MarkPro-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MarkPro";
+  font-weight: 400;
+  src: url("/MarkPro-Normal.woff") format("woff");
+}
+
+@layer base {
+  /* html {
+    font-family: "MarkPro";
+  } */
+
+  html {
+  }
+}
