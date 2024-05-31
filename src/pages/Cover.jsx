@@ -36,7 +36,7 @@ const Cover = () => {
 
   return (
     <div ref={comp}>
-      <div id="flair" className="w-1/6 h-24 bg-black"></div>
+      <div id="flair" className="rounded-full w-5 h-5 bg-customRed"></div>
       <div
         id="intro-slider"
         className="h-screen p-10 bg-white-100 top-0 left-0 font-MarkPro z-10 w-full flex flex-col tracking-tighter text-customRed font-bold"
