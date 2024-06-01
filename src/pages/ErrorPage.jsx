@@ -1,7 +1,9 @@
 function ErrorPage() {
   return (
     <>
-      <h1>ErrorPage</h1>
+      <div className="min-h-40">
+        <h1>ErrorPage</h1>
+      </div>
     </>
   );
 }
