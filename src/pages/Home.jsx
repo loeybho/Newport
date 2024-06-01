@@ -2,8 +2,9 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Cover from "@pages/Cover";
+import AboutMe from "@pages/AboutMe";
 
-const App = () => {
+const Home = () => {
   const container = useRef();
   const flair = useRef();
 
@@ -30,20 +31,22 @@ const App = () => {
 
   return (
     <>
-      <nav className="flex justify-between z-40 fixed top-0 w-full">
-        <button>버튼1</button>
-        <button>버튼2</button>
-      </nav>
-      <div
-        ref={flair}
-        id="flair"
-        className="rounded-full w-5 h-5 bg-customRed"
-      ></div>
       <div ref={container}>
+        <div
+          ref={flair}
+          id="flair"
+          className="rounded-full w-5 h-5 bg-customRed"
+        ></div>
+        <nav className="flex justify-between z-40 fixed top-0 w-full text-white">
+          <button>버튼1</button>
+          <button>버튼2</button>
+        </nav>
+
         <Cover />
+        <AboutMe />
       </div>
     </>
   );
 };
 
-export default App;
+export default Home;
