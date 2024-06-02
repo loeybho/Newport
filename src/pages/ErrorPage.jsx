@@ -1,4 +1,4 @@
-function ErrorPage() {
+export default function ErrorPage() {
   return (
     <>
       <div className="min-h-40">
@@ -7,5 +7,3 @@ function ErrorPage() {
     </>
   );
 }
-
-export default ErrorPage;

@@ -13,6 +13,7 @@ export default {
     extend: {
       colors: {
         customRed: "#ff6565",
+        customGreen: "#DBF2BD",
       },
     },
     fontFamily: {

@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const AboutMe = () => {
+export default function AboutMe() {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +12,6 @@ const AboutMe = () => {
         start: "top center",
         end: "+=250",
         scrub: true,
-        markers: true, // 디버깅용
       },
       x: 300,
       duration: 2,
@@ -22,7 +21,7 @@ const AboutMe = () => {
   return (
     <div id="h-screen">
       <div id="area1" className="h-80 bg-red-400">
-        area1
+        About ME 물처럼 어떤 컵에든 유연하게 담기는 개발자 ~
       </div>
       <div id="area2" className="bg-orange-500 h-80">
         <div id="circle1" className="bg-red-100 w-40">
@@ -35,6 +34,4 @@ const AboutMe = () => {
       <div id="area3" className="h-80 bg-yellow-400"></div>
     </div>
   );
-};
-
-export default AboutMe;
+}
