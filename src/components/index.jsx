@@ -1,5 +1,4 @@
 import Footer from "@components/Footer";
-import Header from "@components/Header";
 import { useRef, useState } from "react";
 import { Outlet } from "react-router-dom";
 import gsap from "gsap";
@@ -8,13 +7,18 @@ import { useGSAP } from "@gsap/react";
 function Layout() {
   const [modalOpen, setModalOpen] = useState(false);
   const modalRef = useRef(null);
+  const flair = useRef();
 
   const handleOpenModal = () => {
     setModalOpen(!modalOpen);
   };
 
   const container = useRef();
-  const flair = useRef();
+  const { contextSafe } = useGSAP({ scope: container });
+
+  const onEnter = contextSafe(({ currentTarget }) => {
+    gsap.to(currentTarget, { rotation: "+=360" });
+  });
 
   useGSAP(() => {
     const handleMouseMove = (e) => {
@@ -45,16 +49,24 @@ function Layout() {
         <div
           ref={flair}
           id="flair"
-          className="rounded-full w-5 h-5 border-black border-2 bg-customGreen absolute z-50"
+          className="rounded-full w-5 h-5 border-customBlack border-[3px] bg-customGreen absolute z-50"
         ></div>
 
         {!modalOpen && (
           <div>
-            <nav className="flex justify-between z-40 fixed top-0 w-full text-white">
-              <button>버튼1</button>
-              <button onClick={handleOpenModal}>버튼2</button>
+            <nav className="flex justify-between z-40 fixed top-0 w-full text-white p-6">
+              <button>
+                <img
+                  className="w-[7rem]"
+                  onClick={onEnter}
+                  src="/flower.svg"
+                  alt=""
+                />
+              </button>
+              <button onClick={handleOpenModal}>
+                <img src="/menu.svg" className="w-14" alt="" />
+              </button>
             </nav>
-            <Header />
             <Outlet />
             <Footer />
           </div>

@@ -10,10 +10,15 @@ export default {
       extrabold: "800",
       black: "900",
     },
+    borderWidth: {
+      DEFAULT: "1px",
+      3: "2.8px",
+    },
     extend: {
       colors: {
         customRed: "#ff6565",
         customGreen: "#DBF2BD",
+        customBlack: "#2F3542",
       },
     },
     fontFamily: {
