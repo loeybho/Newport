@@ -54,7 +54,7 @@ function Layout() {
 
         {!modalOpen && (
           <div>
-            <nav className="flex justify-between z-40 fixed top-0 w-full text-white p-6">
+            <nav className="flex justify-between z-40 fixed top-0 w-full text-white px-14 py-8">
               <button>
                 <img
                   className="w-[7rem]"
