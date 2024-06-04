@@ -60,10 +60,10 @@ export default function Cover() {
         </div>
 
         <div className=" flex text-2xl justify-end font-light tracking-normal">
-          <button className="px-16 flex flex-grow ">
+          <button className="px-16 flex flex-grow gap-1">
             <img
               src="/slash-arrow.svg"
-              style={{ transform: "rotate(90deg)" }}
+              style={{ transform: "rotate(45deg)" }}
             />
             Contact
           </button>
