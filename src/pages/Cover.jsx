@@ -1,5 +1,7 @@
 import Button from "@components/Button";
+import AboutMe from "@pages/AboutMe";
 import { useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Cover() {
   const [hover, setHover] = useState(false);
@@ -65,7 +67,7 @@ export default function Cover() {
               src="/slash-arrow.svg"
               style={{ transform: "rotate(45deg)" }}
             />
-            Contact
+            프로젝트로 바로 이동하기
           </button>
           <div className="px-16 flex gap-10">
             <button className="flex">
@@ -77,22 +79,33 @@ export default function Cover() {
           </div>
         </div>
         <div className="flex justify-center mb-9">
-          <button
-            id="more-btn"
-            onMouseEnter={handleHover}
-            onMouseLeave={handleHover}
-            className="text-2xl tracking-[0em] py-2 px-8 m-2 rounded-full border-2 transition-colors duration-300 ease-in-out bg-yellow-300"
-            style={{
-              backgroundColor: hover ? "#DBF2BD" : "transparent",
-              color: hover ? "#4A5568" : "#fff",
-              border: "2px solid",
-              borderColor: hover ? "transparent" : "white",
-              width: "140px",
-            }}
+          <Link
+            activeClass="active"
+            to="aboutme"
+            spy={true}
+            smooth={true}
+            duration={500}
           >
-            {hover ? "Start" : "Star"}
-          </button>
+            <button
+              id="more-btn"
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}
+              className="text-2xl tracking-[0em] py-2 px-8 m-2 rounded-full border-2 transition-colors duration-300 ease-in-out bg-yellow-300"
+              style={{
+                backgroundColor: hover ? "#DBF2BD" : "transparent",
+                color: hover ? "#4A5568" : "#fff",
+                border: "2px solid",
+                borderColor: hover ? "transparent" : "white",
+                width: "140px",
+              }}
+            >
+              {hover ? "Start" : "Star"}
+            </button>
+          </Link>
         </div>
+      </div>
+      <div id="aboutme">
+        <AboutMe />
       </div>
     </div>
   );

@@ -20,6 +20,8 @@ export default {
         customGreen: "#DBF2BD",
         customStrongGreen: "#00FF00",
         customBlack: "#2F3542",
+        customYellow: "#FFE400",
+        customBeige: "#F4F2ED",
       },
     },
     fontFamily: {
