@@ -22,7 +22,7 @@ export default function AboutMe() {
     <>
       <div className="min-h-screen bg-slate-900 text-white">
         <div className="pt-40 p-5 sm:p-20">
-          <h1 className="text-6xl font-MarkPros font-bold mb-28 sm:text-8xl">
+          <h1 className="text-6xl font-MarkPros font-bold mt-28 mb-28 sm:text-8xl">
             About Me
           </h1>
 
