@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import NewButton from "@components/NewButton";
+import { useState } from "react";
 
 export default function Projects() {
   const [selectedTab, setSelectedTab] = useState(1);
@@ -17,37 +18,31 @@ export default function Projects() {
     switch (selectedTab) {
       case 1:
         return (
-          <div className="flex flex-col">
-            <h2 className="text-lg font-bold">1 / 4</h2>
-            <h1 className="text-3xl font-bold mb-4">카공여지도</h1>
-            <p className="text-base mb-4">
-              프로젝트 설명 Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Nullam ac libero nec ipsum elementum venenatis nec vitae
-              dui. 프로젝트 설명 Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Nullam ac libero nec ipsum elementum venenatis
-              nec 프로젝트 설명 Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Nullam ac libero nec ipsum elementum venenatis
-              nec 프로젝트 설명 Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Nullam ac libero nec ipsum elementum venenatis
-              nec
-            </p>
-            <p className="text-base mb-4">
-              기술 스택: React, Tailwind CSS, Firebase
-            </p>
-            <div className="flex space-x-4">
-              <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
-                배포 URL
-              </button>
-              <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
-                GitHub
-              </button>
+          <>
+            <div className="p-6 flex flex-col min-h-[350px]">
+              <p className="">
+                프로젝트 설명 Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Nullam ac libero nec ipsum elementum venenatis nec vitae
+                dui. 프로젝트 설명 Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Nullam ac libero nec ipsum elementum venenatis
+                nec 프로젝트 설명 Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Nullam ac libero nec ipsum elementum venenatis
+                nec 프로젝트 설명 Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Nullam ac libero nec ipsum elementum venenatis
+                nec
+              </p>
+              <p className="mb-6">기술 스택: React, Tailwind CSS, Firebase</p>
+              <div className="flex">
+                <NewButton props="props">배포 URL</NewButton>
+                <NewButton props="props">Github</NewButton>
+              </div>
             </div>
-          </div>
+          </>
         );
 
       default:
         return (
-          <div className="text-4xl font-bold">
+          <div className="text-4xl font-bold min-h-[350px]">
             {selectedTab} 번째 내용입니다.
           </div>
         );
@@ -55,26 +50,35 @@ export default function Projects() {
   };
 
   return (
-    <div className="h-screen bg-red-100 flex flex-col justify-center relative">
-      <div className="flex flex-col absolute z-10 gap-1">
+    <div className="bg-customLightGray flex flex-col justify-center relative font-NanumSquareNeo text-customBlack p-12">
+      <div className="flex flex-col absolute z-10 gap-2 m-4">
         {tabs.map((tab) => (
           <button
             key={tab.id}
-            className={`py-4 px-1 border border-customBlack rounded-full focus:outline-none focus:border-blue-500 ${
-              selectedTab === tab.id ? "bg-customGreen" : "bg-white"
+            className={`py-6 px-2  border-[2px] border-customBlack ${
+              selectedTab === tab.id ? "bg-customBlack" : "transparent"
             }`}
             onClick={() => handleTabClick(tab.id)}
-          >
-            {tab.label}
-          </button>
+          ></button>
         ))}
       </div>
-      <div className="grid grid-cols-2 mt-16">
-        <div className="bg-red-200 flex-grow p-8">{renderLeftContent()}</div>
-        <div className="bg-blue-400 flex justify-center items-center">
-          {selectedTab === 1 && (
-            <img src="https://via.placeholder.com/400" alt="프로젝트 이미지" />
-          )}
+      <div className="p-9">
+        <div className="p-14">
+          <p className="text-lg mb-2 text-gray-500">1 / 4</p>
+          <h1 className="text-4xl font-black">카공여지도</h1>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="flex-grow m-8">{renderLeftContent()}</div>
+          <div className="flex justify-center p-12">
+            {selectedTab === 1 && (
+              <img
+                className="w-full"
+                src="https://via.placeholder.com/400"
+                alt="프로젝트 이미지"
+              />
+            )}
+          </div>
         </div>
       </div>
     </div>
