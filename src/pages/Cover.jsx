@@ -19,20 +19,12 @@ export default function Cover() {
           className="flex h-screen justify-center items-center px-10 "
         >
           <div className="flex flex-col sm:flex-row gap-10 sm:gap-20 justify-center items-center sm:items-end">
-            <div className="pt-16 text-center sm:text-left sm:pb-10 ">
-              <h1
-                className="text-5xl sm:text-8xl text-neutral-400"
-                id="main-title-1"
-              >
+            <div className="pt-16 text-[4rem] sm:text-[6rem] text-center sm:text-left sm:pb-10 ">
+              <h1 className=" text-neutral-400" id="main-title-1">
                 I am a
               </h1>
-              <h1 className="text-5xl sm:text-8xl" id="main-title-1">
-                Frontend
-              </h1>
-              <h1
-                className="text-5xl sm:text-8xl tracking-[-0.06em]"
-                id="main-title-2"
-              >
+              <h1 id="main-title-1">Frontend</h1>
+              <h1 className="tracking-[-0.06em]" id="main-title-2">
                 Developer
               </h1>
             </div>
@@ -49,13 +41,13 @@ export default function Cover() {
                 오 별
               </h1>
               <div>
-                <Button>안녕</Button>
+                <Button />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col text-1xl justify-end font-light tracking-normal sm:text-2xl sm:flex-row">
+        <div className="flex flex-col text-[1.5rem] justify-end font-light tracking-normal sm:text-[2.5rem] sm:flex-row">
           <div className="font-normal flex gap-1 flex-grow px-6 py-2 hover:underline sm:px-14 sm:py-0">
             <button className="flex hover:underline">
               <img
