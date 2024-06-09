@@ -16,7 +16,7 @@ export default function Cover() {
       >
         <div
           id="center"
-          className="flex h-screen justify-center items-center p-4 sm:p-10"
+          className="flex h-screen justify-center items-center px-10 "
         >
           <div className="flex flex-col sm:flex-row gap-10 sm:gap-20 justify-center items-center sm:items-end">
             <div className="pt-16 text-center sm:text-left sm:pb-10 ">
@@ -67,11 +67,11 @@ export default function Cover() {
             </button>
           </div>
 
-          <div className="px-8 sm:px-16 flex gap-5 sm:gap-10">
-            <button className="flex  hover:underline">
+          <div className="px-8 sm:px-16 flex gap-5 pb-4 sm:gap-10 sm:pb-0">
+            <button className="flex hover:underline">
               Github <img src="/slash-arrow.svg" className="w-6 sm:w-8" />
             </button>
-            <button className="flex gap-2  hover:underline">
+            <button className="flex hover:underline">
               Blog <img src="/slash-arrow.svg" className="w-6 sm:w-8" />
             </button>
           </div>
@@ -85,14 +85,22 @@ export default function Cover() {
             smooth={true}
             duration={500}
           >
-            <button
-              id="more-btn"
-              onMouseEnter={handleHover}
-              onMouseLeave={handleHover}
-              className="text-2xl w-40 tracking-[0em] py-2 px-8 m-2 rounded-full transition-colors border-3 ease-in-out border-white hover:bg-customGreen hover:text-customBlack hover:border-customGreen"
-            >
-              {hover ? "Start" : "Star"}
-            </button>
+            <div>
+              <div>
+                <button
+                  id="more-btn"
+                  onMouseEnter={handleHover}
+                  onMouseLeave={handleHover}
+                  className="text-2xl tracking-wider m-2 flex items-center gap-1 h-14 text-customStrongGreen underline"
+                >
+                  <div className="w-24">{hover ? "START" : "STAR"}</div>
+                  <img
+                    src="/arrow.svg"
+                    className={`w-8 transform transition-transform ${hover ? "rotate-0" : "-rotate-180"}`}
+                  />
+                </button>
+              </div>
+            </div>
           </Link>
         </div>
       </div>

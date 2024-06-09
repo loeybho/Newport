@@ -57,14 +57,18 @@ function Layout() {
             <nav className="flex justify-between z-40 fixed top-0 w-full text-white px-4 py-2 sm:px-14 sm:py-10">
               <button>
                 <img
-                  className="w-24"
+                  className="w-14 sm:w-24"
                   onClick={onEnter}
                   src="/flower.svg"
-                  alt=""
+                  alt="메인 로고"
                 />
               </button>
               <button onClick={handleOpenModal}>
-                <img src="/menu.svg" className="w-14" alt="" />
+                <img
+                  src="/menu.svg"
+                  className="w-10 pt-2 sm:w-14 sm:pt-0"
+                  alt="메뉴바"
+                />
               </button>
             </nav>
             <Outlet />
