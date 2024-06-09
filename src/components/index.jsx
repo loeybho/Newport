@@ -77,11 +77,22 @@ function Layout() {
         )}
 
         {modalOpen && (
-          <div ref={modalRef} className="h-screen bg-customGreen">
-            <button className="text-3xl" onClick={handleOpenModal}>
-              X
-            </button>
-            <h1 style={{ textAlign: "center" }}>공사 중 입니다.</h1>
+          <div className="h-screen bg-customGreen flex justify-center items-center">
+            <div ref={modalRef} className="text-center">
+              <button
+                className="text-3xl bg-customRed p-3 hover:underline"
+                onClick={handleOpenModal}
+              >
+                X
+              </button>
+              <div className="flex gap-3">
+                <img src="/construction.gif" alt="" />
+                <h1 className="pt-1">
+                  안녕하세요. 아직 공사 중입니다! 최대한 빠르게 개발
+                  완료하겠습니다.
+                </h1>
+              </div>
+            </div>
           </div>
         )}
       </div>
