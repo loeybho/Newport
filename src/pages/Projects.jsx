@@ -21,17 +21,11 @@ export default function Projects() {
           <>
             <div className="p-6 flex flex-col min-h-[350px]">
               <p className="">
-                프로젝트 설명 Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Nullam ac libero nec ipsum elementum venenatis nec vitae
-                dui. 프로젝트 설명 Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Nullam ac libero nec ipsum elementum venenatis
-                nec 프로젝트 설명 Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Nullam ac libero nec ipsum elementum venenatis
-                nec 프로젝트 설명 Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Nullam ac libero nec ipsum elementum venenatis
-                nec
+                공부하기 좋은 카페를 추천해주는 웹 어플리케이션입니다.
+                멋쟁이사자처럼 프론트엔드 스쿨 수업에서 팀을 구성해 기획,
+                디자인, 프론드엔드 개발까지 완성했습니다.
               </p>
-              <p className="mb-6">기술 스택: React, Tailwind CSS, Firebase</p>
+              <p className="mb-6">React, Vite, Styled-Components</p>
               <div className="flex">
                 <NewButton props="props">배포 URL</NewButton>
                 <NewButton props="props">Github</NewButton>

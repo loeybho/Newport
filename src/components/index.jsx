@@ -54,10 +54,10 @@ function Layout() {
 
         {!modalOpen && (
           <div>
-            <nav className="flex justify-between z-40 fixed top-0 w-full text-white px-14 py-8">
+            <nav className="flex justify-between z-40 fixed top-0 w-full text-white px-4 py-2 sm:px-14 sm:py-10">
               <button>
                 <img
-                  className="w-[7rem]"
+                  className="w-24"
                   onClick={onEnter}
                   src="/flower.svg"
                   alt=""
@@ -73,11 +73,11 @@ function Layout() {
         )}
 
         {modalOpen && (
-          <div ref={modalRef} className="h-screen bg-teal-700">
-            <button className="bg-orange" onClick={handleOpenModal}>
-              버튼
+          <div ref={modalRef} className="h-screen bg-customGreen">
+            <button className="text-3xl" onClick={handleOpenModal}>
+              X
             </button>
-            <h1 style={{ textAlign: "center" }}>모달창</h1>
+            <h1 style={{ textAlign: "center" }}>공사 중 입니다.</h1>
           </div>
         )}
       </div>
