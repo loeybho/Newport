@@ -1,17 +1,12 @@
 import Footer from "@components/Footer";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Outlet } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 function Layout() {
-  const [modalOpen, setModalOpen] = useState(false);
   const modalRef = useRef(null);
   const flair = useRef();
-
-  const handleOpenModal = () => {
-    setModalOpen(!modalOpen);
-  };
 
   const container = useRef();
   const { contextSafe } = useGSAP({ scope: container });
@@ -52,49 +47,20 @@ function Layout() {
           className="rounded-full w-5 h-5 border-customBlack border-[3px] bg-customGreen absolute z-50"
         ></div>
 
-        {!modalOpen && (
-          <div>
-            <nav className="flex justify-between z-40 fixed top-0 w-full text-white px-4 py-2 sm:px-14 sm:py-10">
-              <button>
-                <img
-                  className="w-14 sm:w-24"
-                  onClick={onEnter}
-                  src="/flower.svg"
-                  alt="메인 로고"
-                />
-              </button>
-              <button onClick={handleOpenModal}>
-                <img
-                  src="/menu.svg"
-                  className="w-10 pt-2 sm:w-14 sm:pt-0"
-                  alt="메뉴바"
-                />
-              </button>
-            </nav>
-            <Outlet />
-            <Footer />
-          </div>
-        )}
-
-        {modalOpen && (
-          <div className="h-screen bg-customGreen flex justify-center items-center">
-            <div ref={modalRef} className="text-center">
-              <button
-                className="text-3xl bg-customRed p-3 hover:underline"
-                onClick={handleOpenModal}
-              >
-                X
-              </button>
-              <div className="flex gap-3">
-                <img src="/construction.gif" alt="" />
-                <h1 className="pt-1">
-                  안녕하세요. 아직 공사 중입니다! 최대한 빠르게 개발
-                  완료하겠습니다.
-                </h1>
-              </div>
-            </div>
-          </div>
-        )}
+        <div>
+          <nav className="flex justify-between z-40 fixed top-0 w-full text-white px-4 py-2 sm:px-14 sm:py-10">
+            <button>
+              <img
+                className="w-14 sm:w-24"
+                onClick={onEnter}
+                src="/flower.svg"
+                alt="메인 로고"
+              />
+            </button>
+          </nav>
+          <Outlet />
+          <Footer />
+        </div>
       </div>
     </>
   );
