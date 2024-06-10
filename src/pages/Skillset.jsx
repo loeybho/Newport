@@ -21,8 +21,8 @@ export default function Skillset() {
     tl.from(frontendRef.current.children, {
       y: 50,
       opacity: 0,
-      duration: 0.5,
-      stagger: 0.1,
+      duration: 0.6,
+      stagger: 0.15,
     });
     const tl2 = gsap.timeline({
       scrollTrigger: {
@@ -35,8 +35,8 @@ export default function Skillset() {
     tl2.from(designRef.current.children, {
       y: 50,
       opacity: 0,
-      duration: 0.5,
-      stagger: 0.1,
+      duration: 0.6,
+      stagger: 0.15,
     });
 
     const tl3 = gsap.timeline({
@@ -50,8 +50,8 @@ export default function Skillset() {
     tl3.from(productivityRef.current.children, {
       y: 50,
       opacity: 0,
-      duration: 0.5,
-      stagger: 0.1,
+      duration: 0.6,
+      stagger: 0.15,
     });
   });
 
