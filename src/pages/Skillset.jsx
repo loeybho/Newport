@@ -81,7 +81,7 @@ export default function Skillset() {
           </div>
 
           <div className="bg-customBlack p-20 rounded-lg">
-            <h2 className="text-4xl font-MarkPro font-bold pb-14 flex justify-center">
+            <h2 className="text-[2rem] font-MarkPro font-bold pb-14 flex justify-center">
               Productivity Tools
             </h2>
             <ul className="flex justify-center gap-4 flex-wrap text-slate-300">

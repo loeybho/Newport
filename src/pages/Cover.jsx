@@ -9,7 +9,7 @@ export default function Cover() {
   const handleHover = () => setHover(!hover);
 
   return (
-    <div>
+    <>
       <div
         id="intro-slider"
         className="h-screen flex flex-col justify-center bg-slate-900 text-white font-MarkPros tracking-[0em] font-extrabold"
@@ -109,6 +109,6 @@ export default function Cover() {
       <div id="aboutme">
         <AboutMe />
       </div>
-    </div>
+    </>
   );
 }
