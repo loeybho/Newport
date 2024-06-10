@@ -55,28 +55,29 @@ export default function Cover() {
           </div>
         </div>
 
-        <div className="bg-red-100 flex font-light tracking-normal text-[1.3rem] sm:text-[1.7rem] sm:flex-row">
-          <div className="font-normal flex flex-grow px-6 hover:underline sm:px-14 sm:py-0">
-            <button className="flex hover:underline">
-              <img
-                className="w-6 sm:w-8"
-                src="/slash-arrow.svg"
-                style={{ transform: "rotate(45deg)" }}
-              />
-              프로젝트 바로 보기
-            </button>
-          </div>
+        <div className="pt-28">
+          <div className="pb-4 font-NanumSquareNeo flex tracking-normal text-[1.3rem] sm:text-[1.7rem] sm:flex-row">
+            <div className="font-normal flex flex-grow px-6 hover:underline sm:px-14 sm:py-0">
+              <button className="flex hover:underline">
+                <img
+                  className="w-6 sm:w-8"
+                  src="/slash-arrow.svg"
+                  style={{ transform: "rotate(45deg)" }}
+                />
+                프로젝트 바로 보기
+              </button>
+            </div>
 
-          <div className="px-8 sm:px-16 flex gap-5 pb-4 sm:gap-10 sm:pb-0">
-            <button className="flex hover:underline">
-              Github <img src="/slash-arrow.svg" className="w-6 sm:w-8" />
-            </button>
-            <button className="flex hover:underline">
-              Blog <img src="/slash-arrow.svg" className="w-6 sm:w-8" />
-            </button>
+            <div className="font-normal px-8 sm:px-16 flex gap-5 pb-4 sm:gap-10 sm:pb-0">
+              <button className="flex hover:underline">
+                Github <img src="/slash-arrow.svg" className="w-6 sm:w-8" />
+              </button>
+              <button className="flex hover:underline">
+                Blog <img src="/slash-arrow.svg" className="w-6 sm:w-8" />
+              </button>
+            </div>
           </div>
-
-          <div className="bg-yellow-500 mb-9">
+          <div className="mb-9">
             <Link
               activeClass="active"
               to="aboutme"
@@ -85,12 +86,12 @@ export default function Cover() {
               duration={500}
             >
               <div>
-                <div>
+                <div className="flex justify-center">
                   <button
                     id="more-btn"
                     onMouseEnter={handleHover}
                     onMouseLeave={handleHover}
-                    className="text-2xl tracking-wider m-2 flex items-center gap-1 h-14 text-customStrongGreen underline"
+                    className="text-[1.5rem]  tracking-wider m-2 flex items-center text-customStrongGreen underline"
                   >
                     <div className="w-24">{hover ? "START" : "STAR"}</div>
                     <img
