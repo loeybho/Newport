@@ -1,5 +1,7 @@
 import Button from "@components/Button";
 import AboutMe from "@pages/AboutMe";
+import Projects from "@pages/Projects";
+import Skillset from "@pages/Skillset";
 import { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link } from "react-scroll";
@@ -59,20 +61,29 @@ export default function Cover() {
         <div className="pt-28">
           <div className="pb-4 flex tracking-normal text-[1.3rem] sm:text-[1.7rem] sm:flex-row">
             <div className="font-NanumSquareNeo font-normal flex flex-grow px-6 hover:underline sm:px-14 sm:py-0">
-              <button className="flex hover:underline">
-                <img
-                  className="w-6 sm:w-8"
-                  src="/slash-arrow.svg"
-                  style={{ transform: "rotate(45deg)" }}
-                />
-                프로젝트 바로 보기
-              </button>
+              <Link
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <button className="flex hover:underline">
+                  <img
+                    className="w-6 sm:w-8 pt-[4px]"
+                    src="/slash-arrow.svg"
+                    style={{ transform: "rotate(45deg)" }}
+                  />
+                  프로젝트 바로 보기
+                </button>
+              </Link>
             </div>
 
             <div className=" font-normal px-8 sm:px-16 flex gap-5 pb-20 sm:gap-10 sm:pb-10">
               <RouterLink to="https://github.com/loeybho" target="_blank">
                 <button className="flex hover:underline">
-                  Github <img src="/slash-arrow.svg" className="w-6 sm:w-8" />
+                  Github{" "}
+                  <img src="/slash-arrow.svg" className="w-6 sm:w-8 pt-[5px]" />
                 </button>
               </RouterLink>
               <RouterLink
@@ -80,7 +91,8 @@ export default function Cover() {
                 target="_blank"
               >
                 <button className="flex hover:underline">
-                  Blog <img src="/slash-arrow.svg" className="w-6 sm:w-8" />
+                  Blog{" "}
+                  <img src="/slash-arrow.svg" className="w-6 sm:w-8 pt-[5px]" />
                 </button>
               </RouterLink>
             </div>
@@ -116,6 +128,11 @@ export default function Cover() {
 
       <div id="aboutme">
         <AboutMe />
+      </div>
+
+      <Skillset />
+      <div id="projects">
+        <Projects />
       </div>
     </>
   );

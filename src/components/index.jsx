@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 function Layout() {
-  const modalRef = useRef(null);
   const flair = useRef();
 
   const container = useRef();

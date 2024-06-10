@@ -1,6 +1,6 @@
 import Layout from "@components/index";
+import Cover from "@pages/Cover";
 import ErrorPage from "@pages/ErrorPage";
-import Home from "@pages/Home";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Cover />,
       },
     ],
   },
