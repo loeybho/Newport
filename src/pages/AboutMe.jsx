@@ -61,7 +61,7 @@ export default function AboutMe() {
     <>
       <div className="min-h-screen bg-customBlue text-white">
         <div className="pt-40 p-10 sm:p-20">
-          <h1 className="text-[4rem] font-MarkPros font-bold mt-24 mb-28 sm:text-[6rem]">
+          <h1 className="text-[4rem] font-MarkPros font-bold mt-4 sm:mt-24 mb-28 sm:text-[6rem]">
             About Me
           </h1>
 
@@ -92,13 +92,13 @@ export default function AboutMe() {
         </div>
 
         <div>
-          <svg viewBox="10 0 200 60">
+          <svg viewBox="10 0 200 100">
             <path
               id="curve"
               fill="none"
               d="m0,56.5c30,-10,30,-30,60,-30c30,0,30,20,60,20c30,0,30,-20,60,-20c30,0,30,10,60,30c30,20,30,30,60,30"
             />
-            <text className="text-[10px]" fill="white">
+            <text className="text-[1rem] sm:text-[0.7rem]" fill="white">
               {[...Array(1)].map((_, i) => {
                 return (
                   <textPath
