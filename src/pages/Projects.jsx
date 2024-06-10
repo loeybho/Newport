@@ -1,80 +1,42 @@
-import NewButton from "@components/NewButton";
-import { useState } from "react";
+import { Link } from "react-router-dom"; // Link를 사용하기 위해 import
 
 export default function Projects() {
-  const [selectedTab, setSelectedTab] = useState(1);
-
-  const handleTabClick = (tab) => {
-    setSelectedTab(tab);
-  };
-
-  const tabs = [
-    { id: 1, label: "1" },
-    { id: 2, label: "2" },
-    { id: 3, label: "3" },
-  ];
-
-  const renderLeftContent = () => {
-    switch (selectedTab) {
-      case 1:
-        return (
-          <>
-            <div className="p-6 flex flex-col min-h-[350px]">
-              <p className="">
-                공부하기 좋은 카페를 추천해주는 웹 어플리케이션입니다.
-                멋쟁이사자처럼 프론트엔드 스쿨 수업에서 팀을 구성해 기획,
-                디자인, 프론드엔드 개발까지 완성했습니다.
-              </p>
-              <p className="mb-6">React, Vite, Styled-Components</p>
-              <div className="flex">
-                <NewButton props="props">배포 URL</NewButton>
-                <NewButton props="props">Github</NewButton>
-              </div>
-            </div>
-          </>
-        );
-
-      default:
-        return (
-          <div className="text-4xl font-bold min-h-[350px]">
-            {selectedTab} 번째 내용입니다.
-          </div>
-        );
-    }
-  };
-
   return (
-    <div className="bg-customLightGray flex flex-col justify-center relative font-NanumSquareNeo text-customBlack p-12">
-      <div className="flex flex-col absolute z-10 gap-2 m-4">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            className={`py-6 px-2  border-[2px] border-customBlack ${
-              selectedTab === tab.id ? "bg-customBlack" : "transparent"
-            }`}
-            onClick={() => handleTabClick(tab.id)}
-          ></button>
-        ))}
-      </div>
-      <div className="p-9">
-        <div className="p-14">
-          <p className="text-lg mb-2 text-gray-500">1 / 4</p>
-          <h1 className="text-4xl font-black">카공여지도</h1>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="flex-grow m-8">{renderLeftContent()}</div>
-          <div className="flex justify-center p-12">
-            {selectedTab === 1 && (
+    <>
+      <div className="bg-customBlack h-screen p-20">
+        <h1 className="text-[4rem] text-white font-MarkPros font-bold pt-4 sm:pt-24 mb-28 sm:text-[6rem]">
+          Projects
+        </h1>
+        <Link to="/project1" className="text-blue-500 hover:underline">
+          <div className="flex justify-center m-2 p-2 border-1 bg-red-400">
+            <div className="w-1/2 mr-4">
+              <h2 className="text-white text-2xl font-semibold mb-2">
+                프로젝트 1
+              </h2>
+              <p className="text-white mb-4">
+                이 프로젝트는 XXX에 대한 설명입니다. 더 자세한 내용을 보려면
+                아래 링크를 클릭하세요.
+              </p>
+              <div className="mb-4">
+                <h3 className="text-white font-semibold mb-2">기술 스택:</h3>
+                <ul className=" text-white flex">
+                  <li>기술1</li>
+                  <li>기술2</li>
+                  <li>기술3</li>
+                </ul>
+              </div>
+              <button>클릭하여 자세히 보기</button>
+            </div>
+            <div className="w-1/2 ml-4">
               <img
-                className="w-full"
-                src="https://via.placeholder.com/400"
+                src="이미지 주소"
                 alt="프로젝트 이미지"
+                className="w-full h-auto"
               />
-            )}
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
-    </div>
+    </>
   );
 }
