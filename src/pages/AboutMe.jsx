@@ -65,10 +65,7 @@ export default function AboutMe() {
             About Me
           </h1>
 
-          <div
-            ref={textFlex}
-            className="font-NanumSquareNeo flex flex-col gap-10 text-[1rem] sm:text-[2rem]"
-          >
+          <div className="font-NanumSquareNeo flex flex-col gap-10 text-[1rem] sm:text-[2rem]">
             {data.map((item, index) => (
               <div key={index} className="m-4 flex flex-col gap-4">
                 <div
@@ -88,6 +85,7 @@ export default function AboutMe() {
                   <p
                     className="bg-gray-50 text-gray-700 rounded-lg p-5 font-bold self-end w-3/4 sm:w-3/4 md:w-3/4 lg:w-3/4 xl:w-3/4"
                     style={{ marginTop: "auto", marginLeft: "auto" }}
+                    ref={textFlex}
                   >
                     <span className="leading-relaxed">{item.answer}</span>
                   </p>
@@ -105,7 +103,7 @@ export default function AboutMe() {
               fill="none"
               d="m0,56.5c30,-10,30,-30,60,-30c30,0,30,20,60,20c30,0,30,-20,60,-20c30,0,30,10,60,30c30,20,30,30,60,30"
             />
-            <text className="text-[1rem] sm:text-[0.7rem]" fill="white">
+            <text className="text-[1rem] sm:text-[0.6rem]" fill="white">
               <textPath ref={(ref) => (texts.current[0] = ref)} href="#curve">
                 유연한 개발자가 될게요 🧚
               </textPath>
