@@ -1,6 +1,7 @@
 import Button from "@components/Button";
 import AboutMe from "@pages/AboutMe";
 import { useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
 import { Link } from "react-scroll";
 
 export default function Cover() {
@@ -56,8 +57,8 @@ export default function Cover() {
         </div>
 
         <div className="pt-28">
-          <div className="pb-4 font-NanumSquareNeo flex tracking-normal text-[1.3rem] sm:text-[1.7rem] sm:flex-row">
-            <div className="font-normal flex flex-grow px-6 hover:underline sm:px-14 sm:py-0">
+          <div className="pb-4 flex tracking-normal text-[1.3rem] sm:text-[1.7rem] sm:flex-row">
+            <div className="font-NanumSquareNeo font-normal flex flex-grow px-6 hover:underline sm:px-14 sm:py-0">
               <button className="flex hover:underline">
                 <img
                   className="w-6 sm:w-8"
@@ -68,30 +69,37 @@ export default function Cover() {
               </button>
             </div>
 
-            <div className="font-normal px-8 sm:px-16 flex gap-5 pb-4 sm:gap-10 sm:pb-0">
-              <button className="flex hover:underline">
-                Github <img src="/slash-arrow.svg" className="w-6 sm:w-8" />
-              </button>
-              <button className="flex hover:underline">
-                Blog <img src="/slash-arrow.svg" className="w-6 sm:w-8" />
-              </button>
+            <div className=" font-normal px-8 sm:px-16 flex gap-5 pb-20 sm:gap-10 sm:pb-10">
+              <RouterLink to="https://github.com/loeybho" target="_blank">
+                <button className="flex hover:underline">
+                  Github <img src="/slash-arrow.svg" className="w-6 sm:w-8" />
+                </button>
+              </RouterLink>
+              <RouterLink
+                to="https://donoteatpasta.tistory.com/"
+                target="_blank"
+              >
+                <button className="flex hover:underline">
+                  Blog <img src="/slash-arrow.svg" className="w-6 sm:w-8" />
+                </button>
+              </RouterLink>
             </div>
           </div>
           <div className="mb-9">
-            <Link
-              activeClass="active"
-              to="aboutme"
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <div>
-                <div className="flex justify-center">
+            <div>
+              <div className="flex justify-center">
+                <Link
+                  activeClass="active"
+                  to="aboutme"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
                   <button
                     id="more-btn"
                     onMouseEnter={handleHover}
                     onMouseLeave={handleHover}
-                    className="text-[1.5rem]  tracking-wider m-2 flex items-center text-customStrongGreen underline"
+                    className="text-[1.5rem] tracking-wider m-2 flex items-center text-customStrongGreen underline"
                   >
                     <div className="w-24">{hover ? "START" : "STAR"}</div>
                     <img
@@ -99,9 +107,9 @@ export default function Cover() {
                       className={`w-8 transform transition-transform ${hover ? "rotate-0" : "-rotate-180"}`}
                     />
                   </button>
-                </div>
+                </Link>
               </div>
-            </Link>
+            </div>
           </div>
         </div>
       </div>
