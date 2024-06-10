@@ -77,11 +77,11 @@ export default function AboutMe() {
                 </p>
 
                 <p
-                  className="bg-gray-50 text-slate-900 relative rounded-lg p-5 font-bold self-end w-3/4 sm:w-3/4 md:w-3/4 lg:w-3/4 xl:w-3/4"
+                  className="bg-gray-50 text-gray-700 relative rounded-lg p-5 font-bold self-end w-3/4 sm:w-3/4 md:w-3/4 lg:w-3/4 xl:w-3/4"
                   ref={(el) => (paragraphs.current[index * 2 + 2] = el)}
                   style={{ marginTop: "auto" }}
                 >
-                  <span className="leading-relaxed font-medium" ref={container}>
+                  <span className="leading-relaxed " ref={container}>
                     {item.answer}
                   </span>
                   <div className="absolute w-6 h-4 top-0 right-0 -mr-6 border-l-transparent border-l-[12px] border-r-transparent border-r-[9px] border-b-[#FFE] border-b-[32px] rotate-[90deg]"></div>
