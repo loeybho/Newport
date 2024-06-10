@@ -65,7 +65,10 @@ export default function AboutMe() {
             About Me
           </h1>
 
-          <div className="font-NanumSquareNeo flex flex-col gap-10 text-[1rem] sm:text-[2rem]">
+          <div
+            className=" font-NanumSquareNeo flex flex-col gap-10 text-[1rem] sm:text-[2rem]"
+            ref={container}
+          >
             {data.map((item, index) => (
               <div key={index} className="m-4 flex flex-col gap-4">
                 <p
@@ -99,17 +102,9 @@ export default function AboutMe() {
               d="m0,56.5c30,-10,30,-30,60,-30c30,0,30,20,60,20c30,0,30,-20,60,-20c30,0,30,10,60,30c30,20,30,30,60,30"
             />
             <text className="text-[1rem] sm:text-[0.7rem]" fill="white">
-              {[...Array(1)].map((_, i) => {
-                return (
-                  <textPath
-                    key={i}
-                    ref={(ref) => (texts.current[i] = ref)}
-                    href="#curve"
-                  >
-                    유연한 개발자가 될게요 🧚
-                  </textPath>
-                );
-              })}
+              <textPath ref={(ref) => (texts.current[0] = ref)} href="#curve">
+                유연한 개발자가 될게요 🧚
+              </textPath>
             </text>
           </svg>
         </div>
