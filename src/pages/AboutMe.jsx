@@ -7,12 +7,12 @@ import { useScroll } from "framer-motion";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutMe() {
-  const container = useRef();
+  const textFlex = useRef();
   const texts = useRef([]);
   const paragraphs = useRef([]);
 
   const { scrollYProgress } = useScroll({
-    target: container,
+    target: textFlex,
     offset: ["end", "start"],
   });
 
@@ -58,7 +58,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <>
+    <div>
       <div className="min-h-screen bg-customBlue text-white">
         <div className="pt-40 p-10 sm:p-20">
           <h1 className="text-[4rem] font-MarkPros font-bold mt-4 sm:mt-24 mb-28 sm:text-[6rem]">
@@ -66,29 +66,33 @@ export default function AboutMe() {
           </h1>
 
           <div
-            className=" font-NanumSquareNeo flex flex-col gap-10 text-[1rem] sm:text-[2rem]"
-            ref={container}
+            ref={textFlex}
+            className="font-NanumSquareNeo flex flex-col gap-10 text-[1rem] sm:text-[2rem]"
           >
             {data.map((item, index) => (
               <div key={index} className="m-4 flex flex-col gap-4">
-                <p
-                  className="bg-customYellow text-slate-900 relative rounded-lg p-5 font-bold self-start"
+                <div
+                  className="relative"
                   ref={(el) => (paragraphs.current[index * 2 + 1] = el)}
                 >
-                  {item.question}
+                  <p className="bg-customYellow text-slate-900 inline-block rounded-lg p-5 font-bold self-start">
+                    {item.question}
+                  </p>
                   <div className="absolute w-6 h-4 top-2 left-0 -ml-6 border-l-transparent border-l-[12px] border-r-transparent border-r-[9px] border-b-[#FFE400] border-b-[32px] rotate-[-90deg]"></div>
-                </p>
+                </div>
 
-                <p
-                  className="bg-gray-50 text-gray-700 relative rounded-lg p-5 font-bold self-end w-3/4 sm:w-3/4 md:w-3/4 lg:w-3/4 xl:w-3/4"
+                <div
+                  className="relative"
                   ref={(el) => (paragraphs.current[index * 2 + 2] = el)}
-                  style={{ marginTop: "auto" }}
                 >
-                  <span className="leading-relaxed " ref={container}>
-                    {item.answer}
-                  </span>
+                  <p
+                    className="bg-gray-50 text-gray-700 rounded-lg p-5 font-bold self-end w-3/4 sm:w-3/4 md:w-3/4 lg:w-3/4 xl:w-3/4"
+                    style={{ marginTop: "auto", marginLeft: "auto" }}
+                  >
+                    <span className="leading-relaxed">{item.answer}</span>
+                  </p>
                   <div className="absolute w-6 h-4 top-0 right-0 -mr-6 border-l-transparent border-l-[12px] border-r-transparent border-r-[9px] border-b-[#FFE] border-b-[32px] rotate-[90deg]"></div>
-                </p>
+                </div>
               </div>
             ))}
           </div>
@@ -109,6 +113,6 @@ export default function AboutMe() {
           </svg>
         </div>
       </div>
-    </>
+    </div>
   );
 }
