@@ -1,38 +1,43 @@
-import { Link } from "react-router-dom"; // Link를 사용하기 위해 import
+import { Link } from "react-router-dom";
+import { aspectRatio } from "@tailwindcss/aspect-ratio";
 
 export default function Projects() {
   return (
     <>
-      <div className="bg-customBlack h-screen p-20">
-        <h1 className="text-[4rem] text-white font-MarkPros font-bold pt-4 sm:pt-24 mb-28 sm:text-[6rem]">
+      <div className="bg-customBlack h-screen p-4">
+        <h1 className="text-4xl text-white font-MarkPros font-bold p-14 pt-4 sm:pt-24 mb-28 sm:text-6xl">
           Projects
         </h1>
-        <Link to="/project1" className="text-blue-500 hover:underline">
-          <div className="flex justify-center m-2 p-2 border-1 bg-red-400">
-            <div className="w-1/2 mr-4">
-              <h2 className="text-white text-2xl font-semibold mb-2">
-                프로젝트 1
+        <Link to="/projects/cagong" className="">
+          <div className="flex-none font-NanumSquareNeo sm:flex group">
+            <div className="aspect-square w-full bg-red-100">
+              <img src="이미지 주소" alt="프로젝트 이미지" className="w-full" />
+            </div>
+            <div className="w-full border-b border-slate-50 transition duration-300 ease-in-out p-10 text-white hover:text-customBlack hover:bg-customOrange">
+              <h2 className=" text-[2.4rem] font-extrabold font-semibold mb-4">
+                카공여지도
               </h2>
-              <p className="text-white mb-4">
-                이 프로젝트는 XXX에 대한 설명입니다. 더 자세한 내용을 보려면
-                아래 링크를 클릭하세요.
+              <p className=" mb-5 text-[1.1rem]">
+                공부하기 좋은 카페를 추천해주는 반응형 웹입니다. 멋쟁이사자처럼
+                프론트엔드 스쿨 수업에서 팀을 구성해 기획, 디자인, 프론트엔드
+                개발까지 완성했습니다.
               </p>
               <div className="mb-4">
-                <h3 className="text-white font-semibold mb-2">기술 스택:</h3>
-                <ul className=" text-white flex">
-                  <li>기술1</li>
-                  <li>기술2</li>
-                  <li>기술3</li>
+                <ul className="flex gap-4">
+                  <li className="border py-1 px-5 rounded-full group-hover:border-customBlack ">
+                    React
+                  </li>
+                  <li className="border py-1 px-5 rounded-full group-hover:border-customBlack">
+                    Styled-Component
+                  </li>
+                  <li className="border py-1 px-5 rounded-full group-hover:border-customBlack">
+                    React
+                  </li>
                 </ul>
               </div>
-              <button>클릭하여 자세히 보기</button>
-            </div>
-            <div className="w-1/2 ml-4">
-              <img
-                src="이미지 주소"
-                alt="프로젝트 이미지"
-                className="w-full h-auto"
-              />
+              <div className="h-20 flex items-end">
+                <button className="">클릭하여 자세히 보기 {">"}</button>
+              </div>
             </div>
           </div>
         </Link>

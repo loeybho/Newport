@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
+
   theme: {
     fontWeight: {
       light: "300",
@@ -17,6 +18,7 @@ export default {
     extend: {
       colors: {
         customRed: "#ff6565",
+        customOrange: "#F19E54",
         customGreen: "#DBF2BD",
         customStrongGreen: "#00FF00",
         customBlue: "#A5BCDE",
@@ -31,6 +33,5 @@ export default {
       NanumSquareNeo: ["NanumSquareNeo"],
     },
   },
-
   plugins: [],
 };

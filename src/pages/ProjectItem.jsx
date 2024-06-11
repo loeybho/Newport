@@ -60,6 +60,6 @@ export default function ProjectItem() {
           </div>
         </div>
       </div>
-    </div>
+    </div>ㅔㄱ
   );
 }
