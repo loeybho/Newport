@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import cagong from "@assets/01_cagong.png";
 
 export default function Cagong() {
   return (
@@ -8,18 +9,18 @@ export default function Cagong() {
           <h3 className="text-lg font-bold">
             <Link to="/work/#contrib-list">
               <img src="" alt="" />
-              Other Projects
+              Byeol's Projects
             </Link>
           </h3>
 
-          <ul className="pagelist mt-4 ">
+          {/* <ul className="pagelist mt-4 ">
             <li className="current mb-2 underline">
               <Link to="/work/spotify/">개발일지</Link>
             </li>
             <li className="mb-2 underline">
               <Link to="/work/figma/">구현의도</Link>
             </li>
-          </ul>
+          </ul> */}
         </div>
         <div className="col-span-5 md:col-span-3 sm:col-span-2 bg-white text-customBlack p-10">
           <h1 className="text-[2rem] font-extrabold mb-4">
@@ -35,29 +36,55 @@ export default function Cagong() {
             멋쟁이사자처럼 프론트엔드 스쿨 수업에서 팀을 구성해 기획, 디자인,
             프론드엔드 개발까지 완성했습니다.
           </p>
-          <ul className="pagelist mt-4 flex gap-3 font-extrabold underline font-MarkPro text-blue-600">
+          <ul className="pagelist mt-4 text-[1.4rem] flex gap-3 font-extrabold underline font-MarkPro text-blue-600">
             <li className="current mb-2 ">
-              <Link to="">배포 URL</Link>
+              <Link to="https://cagongmap.netlify.app/" target="_blank">
+                배포 URL
+              </Link>
             </li>
             <li className="mb-2 ">
-              <Link to="">Github</Link>
+              <Link
+                to="https://github.com/loeybho/Cagong/tree/main"
+                target="_blank"
+              >
+                Github
+              </Link>
             </li>
           </ul>
-          <h2 className="text-[1.8rem] font-extrabold mt-24">구현 의도</h2>
+          <h2 className="text-[1.8rem] font-extrabold mt-24">
+            저는 이런 걸 구현했어요
+          </h2>
           <img
             src="/work/spotify/logo.png"
             alt="카공여지도 여정"
             className="my-4"
           />
-          <p className="text-[1.4rem] text-gray-700  leading-[2.6rem]">
-            홈 페이지 : Swiper로 광고 이미지를 홈 화면에 띄우고, 데이터를 불러와
-            카페 리스트를 보여주었습니다. 카페 리스트 + 무한 스크롤 : React
-            Query로 카페 리스트를 불러오고, 무한 스크롤로 데이터를 6개씩 불러와
-            데이터 로딩 속도를 개선했습니다. 북마크 + 북마크 리스트 : 특정
-            유저가 저장한 카페의 동일한 순서가 담긴 id 값을 추가, 제거할 수 있는
-            북마크 기능을 구현하였습니다. 리뷰 리스트 : 저장된 리뷰 리스트를
-            불러왔습니다.
-          </p>
+          <ul className="ml-4 list-disc">
+            <li>
+              <p className="text-[1.4rem] text-gray-700 leading-[2.6rem]">
+                홈 페이지 : Swiper로 광고 이미지를 홈 화면에 띄우고, 데이터를
+                불러와 카페 리스트 나열
+              </p>
+            </li>
+            <li>
+              <p className="text-[1.4rem] text-gray-700 leading-[2.6rem]">
+                카페 리스트 + 무한 스크롤 : React Query로 카페 리스트를
+                불러오고, 무한 스크롤로 데이터를 6개씩 불러와 데이터 로딩 속도를
+                개선했습니다.
+              </p>
+            </li>
+            <li>
+              <p className="text-[1.4rem] text-gray-700 leading-[2.6rem]">
+                북마크 + 북마크 리스트 : 특정 유저가 저장한 카페의 동일한 순서가
+                담긴 id 값을 추가, 제거할 수 있는 북마크 기능을 구현하였습니다.
+              </p>
+            </li>
+            <li>
+              <p className="text-[1.4rem] text-gray-700 leading-[2.6rem]">
+                리뷰 리스트 : 저장된 리뷰 리스트를 불러왔습니다.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
