@@ -26,7 +26,7 @@ export default function Projects() {
         {projects.map((project) => (
           <Link to={project.link} key={project.id} className="">
             <div className="font-NanumSquareNeo grid grid-cols-1 sm:grid-cols-[1fr_2fr] group mb-8">
-              <div className="bg-customBeige">
+              <div className="bg-customGreen">
                 <img
                   src={project.imageSrc}
                   alt={project.altText}
