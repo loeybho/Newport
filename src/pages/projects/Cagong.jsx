@@ -43,7 +43,7 @@ export default function Cagong() {
               <Link to="">Github</Link>
             </li>
           </ul>
-          <h2 className="text-[1.6rem] font-extrabold mt-24">구현 의도</h2>
+          <h2 className="text-[1.8rem] font-extrabold mt-24">구현 의도</h2>
           <img
             src="/work/spotify/logo.png"
             alt="카공여지도 여정"
