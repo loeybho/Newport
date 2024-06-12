@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Cagong() {
   return (
-    <div className="bg-customBeige min-h-screen p-4 text-gray-600 font-bold font-NanumSquareNeo ">
+    <div className="bg-customBeige min-h-screen p-4 text-gray-600 font-[600] font-NanumSquareNeo ">
       <div className=" max-w-screen-xl mx-auto gap-4 grid grid-cols-2 sm:flex">
         <div className="col-span-1 row-span-1 md:row-span-4 p-4">
           <h3 className="text-lg font-bold">
