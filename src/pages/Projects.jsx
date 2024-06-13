@@ -11,13 +11,52 @@ const projects = [
     altText: "카공여지도 광고 이미지",
     techStack: ["React", "Recoil", "Axios", "Swiper", "Styled-Components"],
     link: "/projects/cagong",
+    hoverColor: "bg-customOrange",
+  },
+  {
+    id: 2,
+    title: "Next Movies",
+    description: "Next JS로 만들었어요",
+    imageSrc: cagong,
+    altText: "Next JS 이미지",
+    techStack: ["Next JS", "Recoil", "Axios", "Swiper", "Styled-Components"],
+    link: "/projects/cagong",
+    hoverColor: "bg-customRed",
+  },
+  {
+    id: 3,
+    title: "WanderLens",
+    description:
+      "공부하기 좋은 카페를 추천해주는 반응형 웹입니다. 멋쟁이사자처럼 프론트엔드 스쿨 수업에서 팀을 구성해 기획, 디자인, 프론트엔드 개발까지 완성했습니다.",
+    imageSrc: cagong,
+    altText: "카공여지도 광고 이미지",
+    techStack: ["React", "Recoil", "Axios", "Swiper", "Styled-Components"],
+    link: "/projects/cagong",
+    hoverColor: "bg-customGreen",
+  },
+  {
+    id: 4,
+    title: "이력서가 들어간 포트폴리오",
+    description:
+      "공부하기 좋은 카페를 추천해주는 반응형 웹입니다. 멋쟁이사자처럼 프론트엔드 스쿨 수업에서 팀을 구성해 기획, 디자인, 프론트엔드 개발까지 완성했습니다.",
+    imageSrc: cagong,
+    altText: "카공여지도 광고 이미지",
+    techStack: ["React", "Recoil", "Axios", "Swiper", "Styled-Components"],
+    link: "/projects/cagong",
+    hoverColor: "bg-customGreen",
   },
 ];
+
+const a = projects.map((item) => {
+  return item.hoverColor;
+});
+
+console.log(a);
 
 export default function Projects() {
   return (
     <>
-      <div className="bg-customBlack p-4">
+      <div className="bg-gray-500 p-4">
         <div className="pt-28 pl-16">
           <h1 className="text-[4rem] text-white font-MarkPros font-bold mt-4 sm:mt-24 mb-28 sm:text-[6rem]">
             Projects
@@ -25,15 +64,17 @@ export default function Projects() {
         </div>
         {projects.map((project) => (
           <Link to={project.link} key={project.id} className="cursor-pointer">
-            <div className=" transition duration-300 ease-in-out  font-NanumSquareNeo hover:bg-customOrange grid grid-cols-1 sm:grid-cols-[1fr_2fr] group mb-8">
-              <div className="bg-customGreen w-full">
+            <div
+              className={`transition duration-300 ease-in-out font-NanumSquareNeo hover:text-customBlack grid grid-cols-1 sm:grid-cols-[1fr_2fr] group mb-8 hover:${project.hoverColor}`}
+            >
+              <div className=" w-full">
                 <img
                   src={project.imageSrc}
                   alt={project.altText}
                   className="w-full"
                 />
               </div>
-              <div className="border-b border-slate-50 p-10 text-white hover:text-customBlack ">
+              <div className="border-b border-slate-50 p-10 text-white  ">
                 <h2 className="text-[2.4rem] font-extrabold font-semibold mb-4">
                   {project.title}
                 </h2>
