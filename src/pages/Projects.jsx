@@ -24,7 +24,7 @@ export default function Projects() {
           </h1>
         </div>
         {projects.map((project) => (
-          <Link to={project.link} key={project.id} className="">
+          <Link to={project.link} key={project.id} className="cursor-pointer">
             <div className=" transition duration-300 ease-in-out  font-NanumSquareNeo hover:bg-customOrange grid grid-cols-1 sm:grid-cols-[1fr_2fr] group mb-8">
               <div className="bg-customGreen w-full">
                 <img
