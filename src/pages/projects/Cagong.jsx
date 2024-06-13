@@ -6,6 +6,7 @@ import cafe_list_01 from "@assets/cagong/2_cafelist.jpeg";
 import bookmark_01 from "@assets/cagong/3_bookmark.jpeg";
 import bookmark_02 from "@assets/cagong/3_bookmark02.jpeg";
 import review_list_01 from "@assets/cagong/4_review.jpeg";
+import before from "@assets/cagong/5_before.jpeg";
 
 export default function Cagong() {
   return (
@@ -123,7 +124,13 @@ export default function Cagong() {
                   </li>
                   <li>
                     <p className="">
-                      무한 스크롤로 데이터를 6개씩 불러와 로딩 속도 개선.
+                      useInfiniteQuery 훅을 사용하여 데이터 6개씩 가져오는 무한
+                      스크롤 로직 구현, 데이터의 로딩 속도 개선
+                    </p>
+                    <p className="">
+                      getNextPageParam 함수를 사용하여 다음 페이지의 매개 변수
+                      설정. 페이지 정보를 받은 후 다음 페이지를 계산하게끔 로직
+                      구현
                     </p>
                   </li>
                 </ul>
@@ -147,26 +154,56 @@ export default function Cagong() {
                 <ul className="ml-7 list-disc">
                   <li className="mb-3">
                     <p className="">
-                      특정 유저가 저장한 카페의 동일한 순서가 담긴 id 값을 추가,
-                      제거할 수 있는 기능 구현.
+                      (왼쪽 이미지) 개별 카페 페이지로 이동 시, 데이터가 있고,
+                      그 중 cafeId와 일치하는 북마크 항목을 찾으면, 해당
+                      아이템이 북마크된 상태로 간주하여 setIsBookmarked(true)와
+                      setBookmarkId(foundItem._id)를 호출하여 상태 업데이트.
+                      <br />
+                      항목을 찾지 못하면 북마크가 되어 있지 않은 상태로 설정되어
+                      빈 북마크 SVG 렌더링.
+                      <br />
+                      데이터가 없거나 사용자가 로그인하지 않은 경우에는 북마크
+                      상태를 false 처리
+                    </p>
+                  </li>
+                  <li className="mb-3">
+                    <p className="">
+                      (오른쪽 이미지)deleteBookmark 함수는 axios를 사용하여 특정
+                      북마크 아이템을 삭제. 삭제된 후의 북마크 목록을 업데이트.
+                      <br />
+                      useEffect 훅을 사용하여 데이터가 변경될 때마다 북마크 상태
+                      변경
                     </p>
                   </li>
                 </ul>
               </li>
 
               <li className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem]">
-                <h3 className="font-extrabold mb-4">리뷰 리스트</h3>
+                <h3 className="font-extrabold mb-4">그 외</h3>
                 <div className="grid grid-cols-2 gap-10 pb-4 pt-4 mb-4">
                   <img
                     src={review_list_01}
                     alt="review_list_01"
                     className="w-full border-3 border-customBeige"
                   />
+                  <img
+                    src={before}
+                    alt="before_login"
+                    className="w-full border-3 border-customBeige"
+                  />
                 </div>
 
                 <ul className="ml-7 list-disc">
                   <li className="mb-3">
-                    <p className="">저장된 리뷰 리스트 소환</p>
+                    <p className="">
+                      저장된 리뷰 리스트 데이터를 불러오는 페이지 구현{" "}
+                    </p>
+                  </li>
+                  <li className="mb-3">
+                    <p className="">
+                      로그인 이동 페이지를 구현하여, 사용자가 명확한 안내와 함께
+                      로그인 페이지로 이동할 수 잇는 링크 제공
+                    </p>
                   </li>
                 </ul>
               </li>
