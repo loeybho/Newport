@@ -9,6 +9,8 @@ import review_list_01 from "@assets/cagong/4_review.jpeg";
 import before from "@assets/cagong/5_before.jpeg";
 import taskflow from "@assets/cagong/taskflow.png";
 import figma from "@assets/cagong/figma.png";
+import cagong_spin_pro from "@assets/cagong/cagong_spin_02.png";
+import cagong_spin from "@assets/cagong/cagong_spin.gif";
 import bookmarkerror from "@assets/cagong/bookmarkerror.gif";
 
 export default function Cagong() {
@@ -330,11 +332,29 @@ export default function Cagong() {
                 </p>
               </Link>
             </div>
+
             <img
               src={figma}
               alt="피그마 캡처본"
               className="w-full border-3 border-customBeige"
             />
+
+            <div className="">
+              <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
+                로딩 중 스피너 📍
+                <span className="text-gray-400">기여도 100%</span>
+              </h2>
+              <img
+                src={cagong_spin}
+                alt="카공여지도 스피너"
+                className="w-1/3 border-3 border-customBeige "
+              />
+              <img
+                src={cagong_spin_pro}
+                alt="카공여지도 스피너 제작 과정"
+                className="h-full w-full border-3 border-customBeige"
+              />
+            </div>
           </div>
         </div>
       </div>
