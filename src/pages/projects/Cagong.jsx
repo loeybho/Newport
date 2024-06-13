@@ -7,6 +7,9 @@ import bookmark_01 from "@assets/cagong/3_bookmark.jpeg";
 import bookmark_02 from "@assets/cagong/3_bookmark02.jpeg";
 import review_list_01 from "@assets/cagong/4_review.jpeg";
 import before from "@assets/cagong/5_before.jpeg";
+import taskflow from "@assets/cagong/taskflow.png";
+import figma from "@assets/cagong/figma.png";
+import bookmarkerror from "@assets/cagong/bookmarkerror.gif";
 
 export default function Cagong() {
   return (
@@ -29,6 +32,7 @@ export default function Cagong() {
             </li>
           </ul> */}
         </div>
+
         <div className="col-span-5 md:col-span-3 sm:col-span-2 bg-white text-customBlack p-10">
           <h1 className="text-[2.2rem] font-extrabold mb-4">카공여지도</h1>
           <div className="mt-4 mb-4">
@@ -61,9 +65,51 @@ export default function Cagong() {
             </li>
           </ul>
 
-          <div>
+          <div className="">
             <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
-              저는 이런 기능을 구현했어요 👩‍💻
+              기술 스택 ⚒️
+            </h2>
+
+            <div className="text-gray-700">
+              <div className="mb-8">
+                <h3 className="mb-4 font-extrabold text-[1.4rem]">
+                  프론트엔드
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white" />
+                  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+                  <img src="https://img.shields.io/badge/Recoil-3578E5?style=for-the-badge&logo=recoil&logoColor=white" />
+                  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+                  <img src="https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
+                  <img src="https://img.shields.io/badge/axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white" />
+                  <img src="https://img.shields.io/badge/react_query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white" />
+                  <img src="https://img.shields.io/badge/Swiper-6332f6?style=for-the-badge&logo=swiper&logoColor=white" />
+                  <img src="https://img.shields.io/badge/react--hook--form-EC5990?style=for-the-badge&logo=react&logoColor=white" />
+                  <img src="https://img.shields.io/badge/lodash-3492FF?style=for-the-badge&logo=lodash&logoColor=white" />
+                  <img src="https://img.shields.io/badge/prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black" />
+                  <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" />
+                </div>
+              </div>
+              <div>
+                <h3 className="mb-4 font-extrabold text-[1.4rem]">
+                  개발 및 커뮤니케이션
+                </h3>
+
+                <div className="flex flex-wrap gap-2">
+                  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+                  <img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=github&logoColor=white" />
+                  <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
+                  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
+                  <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="pb-4">
+            <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
+              저는 이런 기능을 구현했어요 👩‍💻{" "}
+              <span className="text-gray-400">기여도 100%</span>
             </h2>
 
             <ul className="">
@@ -208,6 +254,76 @@ export default function Cagong() {
                 </ul>
               </li>
             </ul>
+          </div>
+
+          <div className="">
+            <h2 className="text-[1.8rem] text-customRed font-extrabold mt-24 mb-10">
+              이런 문제를 해결했어요 🚀{" "}
+              <span className="text-gray-400">기여도 100%</span>
+            </h2>
+
+            <ul className="">
+              <li className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem]">
+                <h3 className="font-extrabold mb-4 ">
+                  북마크 삭제 시 발생하는 오류
+                </h3>
+                <div className=" pb-4 pt-4 mb-4">
+                  <img
+                    src={bookmarkerror}
+                    alt="home_01"
+                    className="w-full border-3 border-customBeige"
+                  />
+                </div>
+
+                <ul className="ml-7 list-disc">
+                  <li className="mb-3">
+                    <p className="">
+                      문제 상황 및 원인
+                      <br />
+                      북마크 삭제 버튼을 클릭하고, 다른 페이지로 이동 후, 다시
+                      돌아오면 삭제했던 북마크가 2초정도 보였다가 사라짐.
+                      <br />
+                      삭제된 북마크가 캐시에 남아 있었기 때문에 발생
+                    </p>
+                  </li>
+                  <li>
+                    <p className="">
+                      해결 방법
+                      <br />
+                      gcTime을 10으로 지정해서 0.01초 만에 데이터가 사라지도록
+                      처리. 저장된 캐싱 데이터가 유효한 시간을 짧게 설정.
+                      <br />
+                      쿼리를 사용하는 컴포넌트가 언마운트 되었을 때, 쿼리
+                      비활성화, 비활성화된 데이터는 gcTime이 지난 후, 캐시에서
+                      자동 제거 가능하기에 해당 기능 사용.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div className="">
+            <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
+              태스크 플로우 🗺️ <span className="text-gray-400">기여도 50%</span>
+            </h2>
+            <img
+              src={taskflow}
+              alt="태스크 플로우"
+              className="w-full border-3 border-customBeige"
+            />
+          </div>
+
+          <div className="">
+            <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
+              유저 인터페이스 🗺️{" "}
+              <span className="text-gray-400">기여도 60%</span>
+            </h2>
+            <img
+              src={figma}
+              alt="피그마 캡처본"
+              className="w-full border-3 border-customBeige"
+            />
           </div>
         </div>
       </div>
