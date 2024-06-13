@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 import cagong from "@assets/01_cagong.png";
+import home_01 from "@assets/cagong/1_home01.jpeg";
+import home_02 from "@assets/cagong/1_home02.jpeg";
+import cafe_list_01 from "@assets/cagong/2_cafelist.jpeg";
+import bookmark_01 from "@assets/cagong/3_bookmark.jpeg";
+import bookmark_02 from "@assets/cagong/3_bookmark02.jpeg";
+import review_list_01 from "@assets/cagong/4_review.jpeg";
 
 export default function Cagong() {
   return (
@@ -9,7 +15,7 @@ export default function Cagong() {
           <h3 className="text-lg font-bold">
             <Link to="/work/#contrib-list">
               <img src="" alt="" />
-              Byeol's Projects
+              Byeol&apos; Projects
             </Link>
           </h3>
 
@@ -35,8 +41,8 @@ export default function Cagong() {
 
           <p className="text-[1.4rem] text-gray-700 leading-[2.6rem]">
             카공여지도는 공부하기 좋은 카페를 추천해주는 웹 어플리케이션입니다.
-            멋쟁이사자처럼 프론트엔드 스쿨 수업에서 팀을 구성해 기획, 디자인,
-            프론드엔드 개발까지 완성했습니다.
+            멋쟁이사자처럼 프론트엔드 스쿨 수업에서 진행된 팀 프로젝트로 기획,
+            디자인, 프론드엔드 개발, 백엔드 개발자와 협업으로 완성되었습니다.
           </p>
           <ul className="pagelist mt-4 text-[1.4rem] flex gap-3 font-extrabold underline font-MarkPro text-blue-600">
             <li className="current mb-2 ">
@@ -56,27 +62,63 @@ export default function Cagong() {
 
           <div>
             <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
-              이런 기능을 구현했어요 (기여도 100%) 👩‍💻
+              저는 이런 기능을 구현했어요 👩‍💻
             </h2>
 
             <ul className="">
-              <li className="text-[1.4rem] text-gray-700 mb-10 leading-[2.6rem]">
-                <h3 className="font-extrabold">홈 페이지</h3>
-                <img src="" alt="카공여지도 설명" className="my-4" />
+              <li className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem]">
+                <h3 className="font-extrabold mb-4">홈 페이지</h3>
+                <div className="grid grid-cols-2 gap-10 pb-4 pt-4 mb-4">
+                  <img
+                    src={home_01}
+                    alt="home_01"
+                    className="w-full border-3 border-customBeige"
+                  />
+                  <img
+                    src={home_02}
+                    alt="home_02"
+                    className="w-full border-3 border-customBeige"
+                  />
+                </div>
+
                 <ul className="ml-7 list-disc">
+                  <li className="mb-3">
+                    <p className="">
+                      메인 화면에 나오는 광고이미지, 카페 리스트를 효율적으로
+                      노출시키기 위해 Swiper를 사용하여 페이지네이션 처리 후,
+                      렌더링
+                    </p>
+                  </li>
                   <li>
-                    <p className="">상단 광고이미지를 Swiper로 렌더링</p>
+                    <p className="">
+                      추천하는 카페 데이터를 띄우기 위해 useCustomAxios 훅을
+                      사용하여 Axios 인스턴스 생성 후, API 요청
+                    </p>
+                  </li>
+                  <li>
+                    <p className="">
+                      react-query의 useQuery 훅을 사용하여 데이터를 비동기적으로
+                      호출. select 옵션으로 응답 데이터를 필요한 형태로 변환
+                    </p>
                   </li>
                 </ul>
               </li>
-              <li className="text-[1.4rem] text-gray-700 mb-10 leading-[2.6rem]">
-                <h3 className="font-extrabold">카페 리스트</h3>
-                <img src="" alt="카페 리스트와 무한 스크롤" className="my-4" />
+
+              <li className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem]">
+                <h3 className="font-extrabold mb-4">카페 리스트</h3>
+                <div className="grid grid-cols-2 gap-10 pb-4 pt-4 mb-4">
+                  <img
+                    src={cafe_list_01}
+                    alt="cafe_list_01"
+                    className="w-full border-3 border-customBeige"
+                  />
+                </div>
+
                 <ul className="ml-7 list-disc">
-                  <li>
+                  <li className="mb-3">
                     <p className="">
-                      React Query를 사용하여 데이터 베이스에 저장된 카페 리스트
-                      렌더링.
+                      CafeListItem이라는 컴포넌트를 구현하여 카페리스트와 홈에
+                      공통적으로 사용, 코드 효율성 증대
                     </p>
                   </li>
                   <li>
@@ -86,11 +128,24 @@ export default function Cagong() {
                   </li>
                 </ul>
               </li>
-              <li className="text-[1.4rem] text-gray-700 mb-10 leading-[2.6rem]">
-                <h3 className="font-extrabold">북마크</h3>
-                <img src="" alt="북마크 기능" className="my-4" />
+
+              <li className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem]">
+                <h3 className="font-extrabold mb-4">북마크</h3>
+                <div className="grid grid-cols-2 gap-10 pb-4 pt-4 mb-4">
+                  <img
+                    src={bookmark_01}
+                    alt="bookmark_01"
+                    className="w-full border-3 border-customBeige"
+                  />
+                  <img
+                    src={bookmark_02}
+                    alt="bookmark_02"
+                    className="w-full border-3 border-customBeige"
+                  />
+                </div>
+
                 <ul className="ml-7 list-disc">
-                  <li>
+                  <li className="mb-3">
                     <p className="">
                       특정 유저가 저장한 카페의 동일한 순서가 담긴 id 값을 추가,
                       제거할 수 있는 기능 구현.
@@ -98,11 +153,19 @@ export default function Cagong() {
                   </li>
                 </ul>
               </li>
-              <li className="text-[1.4rem] text-gray-700 mb-10 leading-[2.6rem]">
-                <h3 className="font-extrabold">리뷰 리스트</h3>
-                <img src="" alt="리뷰 리스트" className="my-4" />
+
+              <li className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem]">
+                <h3 className="font-extrabold mb-4">리뷰 리스트</h3>
+                <div className="grid grid-cols-2 gap-10 pb-4 pt-4 mb-4">
+                  <img
+                    src={review_list_01}
+                    alt="review_list_01"
+                    className="w-full border-3 border-customBeige"
+                  />
+                </div>
+
                 <ul className="ml-7 list-disc">
-                  <li>
+                  <li className="mb-3">
                     <p className="">저장된 리뷰 리스트 소환</p>
                   </li>
                 </ul>
