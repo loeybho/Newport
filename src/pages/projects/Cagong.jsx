@@ -319,6 +319,17 @@ export default function Cagong() {
               유저 인터페이스 🗺️{" "}
               <span className="text-gray-400">기여도 60%</span>
             </h2>
+
+            <div className="mb-4">
+              <Link
+                to="https://www.figma.com/design/C9163ColKKK0cUBGEFLKHL/%EC%98%A4%EC%A1%B0%EC%82%AC%EB%A7%88?node-id=110-4944&t=jSCYDcx8qFPfjY1G-1"
+                target="_black"
+              >
+                <p className="text-[1.4rem] text-blue-500 underline">
+                  피그마 원본 보러가기 {">"}
+                </p>
+              </Link>
+            </div>
             <img
               src={figma}
               alt="피그마 캡처본"
