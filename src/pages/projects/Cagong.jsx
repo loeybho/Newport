@@ -36,15 +36,6 @@ export default function Cagong() {
               Byeol&apos; Projects
             </Link>
           </h3>
-
-          {/* <ul className="pagelist mt-4 ">
-            <li className="current mb-2 underline">
-              <Link to="/work/spotify/">개발일지</Link>
-            </li>
-            <li className="mb-2 underline">
-              <Link to="/work/figma/">구현의도</Link>
-            </li>
-          </ul> */}
         </div>
 
         <div className="col-span-5 md:col-span-3 sm:col-span-2 bg-white text-customBlack p-10">
@@ -116,6 +107,30 @@ export default function Cagong() {
                   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
                   <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" />
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="">
+            <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
+              저는 팀장을 맡았어요 🤓
+            </h2>
+
+            <div className="text-gray-700">
+              <div className="mb-8">
+                <p className="text-[1.4rem]">
+                  팀 내에서 팀장을 맡아 프로젝트를 리드했어요. 매일 아침 일찍
+                  일어나 팀이 달성해야 할 목표를 준비하고, 노션에 정리했어요.
+                  또한 원활한 커뮤니케이션을 위해 매일 아침 스크럼 시간을 가져
+                  서로의 작업 진행 과정을 공유하는 시간을 가졌어요.
+                  <br /> <br />
+                  맡은 기능을 개발하고, 프로젝트를 리드하는 것이 쉬운 일은
+                  아니었지만, 협업의 힘과 커뮤니케이션의 힘을 배울 수 있었어요.
+                  <br /> <br />
+                  프로젝트 최종 회고 시간에 팀원 전원으로부터 의견과 피드백을
+                  편안하게 주고 받을 수 있는 환경을 조성해준다는 피드백을
+                  받았어요.
+                </p>
               </div>
             </div>
           </div>
