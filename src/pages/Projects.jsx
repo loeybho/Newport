@@ -25,15 +25,15 @@ export default function Projects() {
         </div>
         {projects.map((project) => (
           <Link to={project.link} key={project.id} className="">
-            <div className="font-NanumSquareNeo grid grid-cols-1 sm:grid-cols-[1fr_2fr] group mb-8">
-              <div className="bg-customGreen">
+            <div className=" transition duration-300 ease-in-out  font-NanumSquareNeo hover:bg-customOrange grid grid-cols-1 sm:grid-cols-[1fr_2fr] group mb-8">
+              <div className="bg-customGreen w-full">
                 <img
                   src={project.imageSrc}
                   alt={project.altText}
                   className="w-full"
                 />
               </div>
-              <div className="border-b border-slate-50 transition duration-300 ease-in-out p-10 text-white hover:text-customBlack hover:bg-customOrange">
+              <div className="border-b border-slate-50 p-10 text-white hover:text-customBlack ">
                 <h2 className="text-[2.4rem] font-extrabold font-semibold mb-4">
                   {project.title}
                 </h2>
