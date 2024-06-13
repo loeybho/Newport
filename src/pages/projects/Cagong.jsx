@@ -17,7 +17,7 @@ export default function Cagong() {
       <div className=" max-w-screen-xl mx-auto gap-4 grid grid-cols-2 sm:flex">
         <div className="col-span-1 row-span-1 md:row-span-4 p-4">
           <h3 className="text-lg font-bold">
-            <Link to="/work/#contrib-list">
+            <Link to="/">
               <img src="" alt="" />
               Byeol&apos; Projects
             </Link>
