@@ -4,7 +4,7 @@ import ErrorPage from "@pages/ErrorPage";
 import Cagong from "@pages/projects/Cagong";
 import Interactive from "@pages/projects/Interactive";
 import NextMovies from "@pages/projects/NextMovies";
-import WanderLens from "@pages/projects/NextMovies";
+import WanderLens from "@pages/projects/WanderLens";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([

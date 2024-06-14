@@ -32,8 +32,8 @@ export default function Cagong() {
         <div className="col-span-1 row-span-1 md:row-span-4 p-4">
           <h3 className="text-lg font-bold">
             <Link to="/">
-              <img src="" alt="" />
-              Byeol&apos; Projects
+              <img src={cagong} alt="카공여지도 로고" className="w-20" />
+              Cagong Map
             </Link>
           </h3>
         </div>
@@ -45,12 +45,13 @@ export default function Cagong() {
               2024.03.28 - 2024.04.25
             </p>
           </div>
+
           <div className="p-10">
             <img src={cagong} className="w-1/2" />
           </div>
 
           <p className="text-[1.4rem] text-gray-700 leading-[2.6rem]">
-            카공여지도는 공부하기 좋은 카페를 추천해주는 웹 어플리케이션입니다.
+            공부하기 좋은 카페를 추천해주는 웹 어플리케이션입니다.
             멋쟁이사자처럼 프론트엔드 스쿨 수업에서 진행된 팀 프로젝트로 기획,
             디자인, 프론드엔드 개발, 백엔드 개발자와 협업으로 완성되었습니다.
           </p>
