@@ -37,7 +37,6 @@ export default function Cagong() {
             </Link>
           </h3>
         </div>
-
         <div className="col-span-5 md:col-span-3 sm:col-span-2 bg-white text-customBlack p-10">
           <h1 className="text-[2.2rem] font-extrabold mb-4">카공여지도</h1>
           <div className="mt-4 mb-4">
@@ -45,11 +44,9 @@ export default function Cagong() {
               2024.03.28 - 2024.04.25
             </p>
           </div>
-
           <div className="p-10">
             <img src={cagong} className="w-1/2" />
           </div>
-
           <p className="text-[1.4rem] text-gray-700 leading-[2.6rem]">
             공부하기 좋은 카페를 추천해주는 웹 어플리케이션입니다.
             멋쟁이사자처럼 프론트엔드 스쿨 수업에서 진행된 팀 프로젝트로 기획,
@@ -70,7 +67,6 @@ export default function Cagong() {
               </Link>
             </li>
           </ul>
-
           <div className="">
             <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
               기술 스택 ⚒️
@@ -111,7 +107,6 @@ export default function Cagong() {
               </div>
             </div>
           </div>
-
           <div className="">
             <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
               저는 팀장을 맡았어요 🤓
@@ -135,7 +130,6 @@ export default function Cagong() {
               </div>
             </div>
           </div>
-
           <div className="pb-4">
             <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
               저는 이런 기능을 구현했어요 👩‍💻{" "}
@@ -285,7 +279,6 @@ export default function Cagong() {
               </li>
             </ul>
           </div>
-
           <div className="">
             <h2 className="text-[1.8rem] text-customRed font-extrabold mt-24 mb-10">
               이런 문제를 해결했어요 🚀{" "}
@@ -332,7 +325,6 @@ export default function Cagong() {
               </li>
             </ul>
           </div>
-
           <div className="">
             <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
               태스크 플로우 🗺️ <span className="text-gray-400">기여도 50%</span>
@@ -343,7 +335,6 @@ export default function Cagong() {
               className="w-full border-3 border-customBeige"
             />
           </div>
-
           <div className="">
             <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
               유저 인터페이스 🗺️{" "}
@@ -383,6 +374,38 @@ export default function Cagong() {
                 className="h-full w-full border-3 border-customBeige"
               />
             </div>
+          </div>
+          <div className="pb-4">
+            <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
+              블로그에 정리 했어요 🗂️
+            </h2>
+
+            <ul className="mt-4 text-[1.4rem] font-extrabold underline font-MarkPro text-blue-600">
+              <li className="current mb-2">
+                <Link
+                  to="https://donoteatpasta.tistory.com/191"
+                  target="_blank"
+                >
+                  프로젝트 로그
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link
+                  to="https://donoteatpasta.tistory.com/190"
+                  target="_blank"
+                >
+                  .env를 gitignore에 추가해야 하는 이유와 북마크 기능 구현 방법
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link
+                  to="https://donoteatpasta.tistory.com/189"
+                  target="_blank"
+                >
+                  React-query 공부
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@ const projects = [
     id: 4,
     title: "인터랙티브 포트폴리오",
     description:
-      "현재 보고 있는 포트폴리오입니다. GSAP, framer-motion등의 라이브러리를 사용하여 보다 동적인 화면을 구현했습니다.",
+      "현 포트폴리오 웹사이트 입니다. GSAP, framer-motion등의 라이브러리를 사용하여 보다 동적인 화면을 구현했습니다.",
     imageSrc: resume,
     altText: "카공여지도 광고 이미지",
     techStack: ["React", "GSAP", "Framer-Motion", "Lenis"],

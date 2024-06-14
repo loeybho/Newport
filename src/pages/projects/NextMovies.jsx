@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import NextMoviesLogo from "@assets/03_next.png";
 import { useEffect, useRef } from "react";
+import home_01 from "@assets/nextmovie/home_01.png";
+import detail_01 from "@assets/nextmovie/detail_01.png";
 
 export default function NextMovies() {
   const topRef = useRef(null);
@@ -87,7 +89,6 @@ export default function NextMovies() {
                   <div className="flex flex-wrap gap-2">
                     <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
                     <img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=github&logoColor=white" />
-                    <img src="https://img.shields.io/badge/Movies API-000000?style=for-the-badge&logo=&logoColor=white" />
                   </div>
                 </div>
               </div>
@@ -103,6 +104,7 @@ export default function NextMovies() {
                   <h3 className="font-extrabold mb-4">홈</h3>
                   <div className="pb-4 pt-4 mb-4">
                     <img
+                      src={home_01}
                       alt="map_01"
                       className="w-full border-3 border-customBeige"
                     />
@@ -110,69 +112,79 @@ export default function NextMovies() {
 
                   <ul className="ml-7 list-disc">
                     <li className="mb-3">
-                      <p className="">API 활용하여 data fetching</p>
-                    </li>
-                    <li className="mb-3">
                       <p className="">
-                        유튜브 영상의 개별 key값을 map으로 꺼냈음
+                        fetch 함수를 사용하여 Moive API로부터 데이터를 가져온
+                        후, JSON형태로 변환하여 반환
                       </p>
                     </li>
+
                     <li className="mb-3">
                       <p className="">
-                        prefetch 를 넣어 미리 로드하여 시간 개선
+                        각각의 포스터 요소를 Link로 감싸되, prefetch 속성을
+                        추가하여 링크된 페이지를 미리 로드. 해당 포스터를
+                        클릭하여 디테일 페이지 이동시 영화 정보를 로딩 없이 바로
+                        렌더링 하여 사용자 경험 개선
                       </p>
                     </li>
                   </ul>
                 </li>
                 <li className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem]">
-                  <h3 className="font-extrabold mb-4">홈</h3>
+                  <h3 className="font-extrabold mb-4">영화 디테일</h3>
                   <div className="pb-4 pt-4 mb-4">
                     <img
-                      alt="map_01"
+                      src={detail_01}
+                      alt="detail_01"
                       className="w-full border-3 border-customBeige"
                     />
                   </div>
 
                   <ul className="ml-7 list-disc">
                     <li className="mb-3">
-                      <p className="">Movies API 활용하여 data fetching</p>
-                    </li>
-                    <li className="mb-3">
                       <p className="">
-                        유튜브 영상의 개별 key값을 map으로 꺼냈음
+                        video 배열을 순회하며 유튜브 비디오를 iframes요소로
+                        렌더링. 페이지 내에서 관련 영상을 바로 볼 수 있게 구현
                       </p>
                     </li>
                     <li className="mb-3">
                       <p className="">
-                        prefetch 를 넣어 미리 로드하여 시간 개선
+                        getMovie 함수를 사용하여 API로부터 데이터를 불러온 후,
+                        영화 제목, 정보, 평점 등 렌더링
                       </p>
                     </li>
                   </ul>
                 </li>
-                <li className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem]">
-                  <h3 className="font-extrabold mb-4">홈</h3>
-                  <div className="pb-4 pt-4 mb-4">
-                    <img
-                      alt="map_01"
-                      className="w-full border-3 border-customBeige"
-                    />
-                  </div>
+              </ul>
+            </div>
 
-                  <ul className="ml-7 list-disc">
-                    <li className="mb-3">
-                      <p className="">API 활용하여 data fetching</p>
-                    </li>
-                    <li className="mb-3">
-                      <p className="">
-                        유튜브 영상의 개별 key값을 map으로 꺼냈음
-                      </p>
-                    </li>
-                    <li className="mb-3">
-                      <p className="">
-                        prefetch 를 넣어 미리 로드하여 시간 개선
-                      </p>
-                    </li>
-                  </ul>
+            <div className="pb-4">
+              <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
+                블로그에 정리 했어요 🗂️
+              </h2>
+
+              <ul className="mt-4 text-[1.4rem] font-extrabold underline font-MarkPro text-blue-600">
+                <li className="current mb-2">
+                  <Link
+                    to="https://donoteatpasta.tistory.com/198"
+                    target="_blank"
+                  >
+                    Next.js 입문하기
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    to="https://donoteatpasta.tistory.com/199"
+                    target="_blank"
+                  >
+                    Nex.js data fetching 하는 방법
+                  </Link>
+                </li>
+                <li className="mb-2">
+                  <Link
+                    to="https://donoteatpasta.tistory.com/200"
+                    target="_blank"
+                  >
+                    Nex.js 를 Vercel로 배포하기
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -183,12 +195,9 @@ export default function NextMovies() {
               </h2>
 
               <p className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem]">
-                구글 지도 API를 활용하여 프로젝트를 구현할 수 있을까 걱정이
-                되었는데, 공식 문서가 꼼꼼히 적혀 있어 어렵지 않게 구현할 수
-                있었다. 또한 Tailwind CSS를 처음으로 이용했는데 왜 편하다고 하는
-                지 알게 되었다. 추후 사진 용량 줄이기, 구글 지도 Marker 함수
-                최신 버전으로 수정, 추가 여행지 카테고리 및 사진을 추가하는
-                리팩토링 시간을 가질 예정이다.
+                처음으로 Next js를 사용한 프로젝트라 완료된 후 뿌듯함이 있었다.
+                추후 리팩토링 시간에 반응형 디자인을 적용하고, 공공 영화 API로
+                수정해 더 풍부하고, 최신의 콘텐츠를 제공할 예정이다.
               </p>
             </div>
           </div>

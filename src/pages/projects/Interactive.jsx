@@ -25,16 +25,18 @@ export default function Interactive() {
                 alt="NextMovies Logo"
                 className="w-20"
               />
-              Wander lens
+              Interactive
             </Link>
           </h3>
         </div>
 
         <div className="col-span-5 md:col-span-3 sm:col-span-2 bg-white text-customBlack p-10">
-          <h1 className="text-[2.2rem] font-extrabold mb-4">원더 렌즈</h1>
+          <h1 className="text-[2.2rem] font-extrabold mb-4">
+            인터랙티브 포트폴리오
+          </h1>
           <div className="mt-4 mb-4">
             <p className="text-gray-500 text-[1.2rem]">
-              2024.05.06 - 2024.05.11
+              2024.05.28 - 2024.06.14
             </p>
           </div>
           <div className="p-10">
@@ -42,20 +44,20 @@ export default function Interactive() {
           </div>
 
           <p className="text-[1.4rem] text-gray-700 leading-[2.6rem]">
-            방문했던 여행지의 사진을 모은 웹사이트입니다. Tailwind CSS로 심플한
-            UI를 구현한 개인 프로젝트입니다. 구글 지도 API를 활용하여 갔던
-            여행지에 마커를 띄우고, 여행지 페이지에 반응형 디자인을 고려하여
-            사진을 배치했습니다.
+            현 포트폴리오 웹사이트입니다. motion-framer, gsap, lenis 등의
+            라이브러리를 사용하여 동적으로 구현하였습니다. 구체적인 개발 과정을
+            정리했습니다.
           </p>
+
           <ul className="pagelist mt-4 text-[1.4rem] flex gap-3 font-extrabold underline font-MarkPro text-blue-600">
             <li className="current mb-2">
-              <Link to="https://throughwanderlens.netlify.app/" target="_blank">
+              <Link to="https://byolsfolio.netlify.app/" target="_blank">
                 배포 URL
               </Link>
             </li>
             <li className="mb-2">
               <Link
-                to="https://github.com/loeybho/WanderLens?tab=readme-ov-file"
+                to="https://github.com/loeybho/Newportfolio"
                 target="_blank"
               >
                 Github
@@ -76,9 +78,16 @@ export default function Interactive() {
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
-                    <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+
                     <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-                    <img src="https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white" />
+                    <img src="https://img.shields.io/badge/React Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white" />
+                    <img src="https://img.shields.io/badge/classnames-000000?style=for-the-badge&logo=classnames&logoColor=white" />
+                    <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+                    <img src="https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=framer&logoColor=white" />
+                    <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" />
+                    <img src="https://img.shields.io/badge/Lenis-ffc0cb?style=for-the-badge&logo=Lenis&logoColor=white" />
+
+                    <img src="https://img.shields.io/badge/react--scroll-000000?style=for-the-badge&logo=reactscroll&logoColor=white" />
                   </div>
                 </div>
                 <div>
@@ -89,7 +98,6 @@ export default function Interactive() {
                   <div className="flex flex-wrap gap-2">
                     <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
                     <img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=github&logoColor=white" />
-                    <img src="https://img.shields.io/badge/Google Maps API-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white" />
                   </div>
                 </div>
               </div>
@@ -137,16 +145,38 @@ export default function Interactive() {
 
             <div className="pb-4">
               <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
-                느낀점 🤓
+                블로그에 정리 했어요 🗂️
               </h2>
 
-              <p className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem]">
-                구글 지도 API를 활용하여 프로젝트를 구현할 수 있을까 걱정이
-                되었는데, 공식 문서가 꼼꼼히 적혀 있어 어렵지 않게 구현할 수
-                있었다. 또한 Tailwind CSS를 처음으로 이용했는데 왜 편하다고 하는
-                지 알게 되었다. 추후 사진 용량 줄이기, 구글 지도 Marker 함수
-                최신 버전으로 수정, 추가 여행지 카테고리 및 사진을 추가하는
-                리팩토링 시간을 가질 예정이다.
+              <ul className="mt-4 text-[1.4rem] font-extrabold underline font-MarkPro text-blue-600">
+                <li className="current mb-2">
+                  <Link
+                    to="https://donoteatpasta.tistory.com/202"
+                    target="_blank"
+                  >
+                    부드러운 전체 스크롤 설치 Lenis
+                  </Link>
+                </li>
+                <li className="current mb-2">
+                  <Link
+                    to="https://donoteatpasta.tistory.com/205"
+                    target="_blank"
+                  >
+                    classnames 라이브러리를 사용하여 동적 class 추가하기
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="pb-4">
+              <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
+                느낀점 🤓
+              </h2>
+              <p className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem] gap-4 inline-block">
+                기존 포트폴리오가 정적인 느낌이 강해 아쉬움이 있었다. 다시
+                개발하길 잘 했다는 생각이 들었고, 애정이 훨씬 간다. 꾸준히
+                추가하고, 디벨롭 할 예정이다.
+                <img src="/construction.gif" />
               </p>
             </div>
           </div>

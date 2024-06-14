@@ -197,6 +197,23 @@ export default function WanderLens() {
 
             <div className="pb-4">
               <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
+                블로그에 정리 했어요 🗂️
+              </h2>
+
+              <ul className="mt-4 text-[1.4rem] font-extrabold underline font-MarkPro text-blue-600">
+                <li className="current mb-2">
+                  <Link
+                    to="https://donoteatpasta.tistory.com/197"
+                    target="_blank"
+                  >
+                    리액트에서 Google Maps API 사용하는 방법
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="pb-4">
+              <h2 className="text-[1.8rem] font-extrabold mt-24 mb-10">
                 느낀점 🤓
               </h2>
 
