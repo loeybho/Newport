@@ -2,6 +2,7 @@ import Layout from "@components/index";
 import Cover from "@pages/Cover";
 import ErrorPage from "@pages/ErrorPage";
 import Cagong from "@pages/projects/Cagong";
+import Interactive from "@pages/projects/Interactive";
 import NextMovies from "@pages/projects/NextMovies";
 import WanderLens from "@pages/projects/NextMovies";
 import { createBrowserRouter } from "react-router-dom";
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/projects/nextmovies",
     element: <NextMovies />,
+  },
+  {
+    path: "/projects/interactive",
+    element: <Interactive />,
   },
 ]);
 

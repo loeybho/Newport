@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import NextMoviesLogo from "@assets/01_cagong.png";
-import { useEffect, useRef } from "react";
 
-export default function NextMovies() {
+import { useEffect, useRef } from "react";
+import NextMoviesLogo from "@assets/01_cagong.png";
+
+export default function Interactive() {
   const topRef = useRef(null);
 
   useEffect(() => {
