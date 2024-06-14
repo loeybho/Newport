@@ -1,27 +1,19 @@
 import { Link } from "react-router-dom";
-import NextMoviesLogo from "@assets/04_flower.png";
-import { useEffect, useRef } from "react";
+import InteractiveLogo from "@assets/04_flower.png";
+
+import home_01 from "@assets/interactive/home_01.gif";
+import troublebefore_01 from "@assets/interactive/troublebefore.gif";
+import solved_01 from "@assets/interactive/solved.gif";
 
 export default function Interactive() {
-  const topRef = useRef(null);
-
-  useEffect(() => {
-    if (topRef.current) {
-      topRef.current.scrollIntoView({ behavior: "auto" });
-    }
-  }, []);
-
   return (
-    <div
-      ref={topRef}
-      className="bg-customBeige min-h-screen p-4 text-gray-600 font-[600] font-NanumSquareNeo"
-    >
+    <div className="bg-customBeige min-h-screen p-4 text-gray-600 font-[600] font-NanumSquareNeo">
       <div className="max-w-screen-xl mx-auto gap-4 grid grid-cols-2 sm:flex">
         <div className="col-span-1 row-span-1 md:row-span-4 p-4">
           <h3 className="text-lg font-bold">
             <Link to="/">
               <img
-                src={NextMoviesLogo}
+                src={InteractiveLogo}
                 alt="NextMovies Logo"
                 className="w-20"
               />
@@ -40,7 +32,11 @@ export default function Interactive() {
             </p>
           </div>
           <div className="p-10">
-            <img src={NextMoviesLogo} className="w-1/2" alt="NextMovies Logo" />
+            <img
+              src={InteractiveLogo}
+              className="w-1/2"
+              alt="NextMovies Logo"
+            />
           </div>
 
           <p className="text-[1.4rem] text-gray-700 leading-[2.6rem]">
@@ -110,10 +106,11 @@ export default function Interactive() {
 
               <ul className="">
                 <li className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem]">
-                  <h3 className="font-extrabold mb-4">구글 지도</h3>
-                  <div className="pb-4 pt-4 mb-4">
+                  <h3 className="font-extrabold mb-4">메인 페이지</h3>
+                  <div className=" pb-4 pt-4 mb-4">
                     <img
-                      alt="map_01"
+                      src={home_01}
+                      alt="home_01"
                       className="w-full border-3 border-customBeige"
                     />
                   </div>
@@ -121,21 +118,73 @@ export default function Interactive() {
                   <ul className="ml-7 list-disc">
                     <li className="mb-3">
                       <p className="">
-                        구글 Map API에서 키 값을 발급받아 Script에 넣고, 구글
-                        지도 연동하여 렌더링. 공식 문서에는 javascript를
-                        기반으로 나와있어 React 문법에 맞게 수정
+                        Lenis 라이브러리를 사용하여 부드러운 전체스크롤 구현,
+                        디자인적 완성도에 기여
                       </p>
                     </li>
                     <li className="mb-3">
                       <p className="">
-                        useRef로 구글 지도를 띄우기 위한 mapRef 지정 후 구글
-                        지도가 렌더링 될 참조 DOM요소 선택
+                        React Scroll 라이브러리를 사용해 프로젝트 카테고리로
+                        바로 이동할 수 있게 하여 사용자 경험 개선
                       </p>
                     </li>
                     <li className="mb-3">
                       <p className="">
-                        갔던 여행지를 지도에 체크하기 위해 각 나라의 위도와
-                        경도가 담긴 좌표값 계산. 커스텀 마커로 등록
+                        디자인 마우스 포인터 구현. useRef로 DOM 요소에 접근.
+                        container 요소에서 마우스 이동 이벤트를 감지하고, 마우스
+                        포인터의 위치에 따라 flair요소를 애니메이션으로 이동.
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div className="">
+              <h2 className="text-[1.8rem] text-customRed font-extrabold mt-24 mb-10">
+                이런 문제를 해결했어요 🚀{" "}
+                <span className="text-gray-400">기여도 100%</span>
+              </h2>
+
+              <ul className="">
+                <li className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem]">
+                  <h3 className="font-extrabold mb-4 ">
+                    hover 시 배경 색상 에러
+                  </h3>
+                  <div className=" pb-4 pt-4 mb-4">
+                    <img
+                      src={troublebefore_01}
+                      alt="문제 상황 gif"
+                      className="w-full border-3 border-customBeige"
+                    />
+                  </div>
+
+                  <ul className="ml-7 list-disc">
+                    <li className="mb-3">
+                      <p className="">
+                        문제 상황 및 원인
+                        <br />
+                        프로젝트 데이터를 컴포넌트로 나열할 때, 각 프로젝트의
+                        배경 색상이 Hover 시 반응적으로 변하도록 구현. 그러나
+                        일부 색상에서는 예상대로 작동하지 않는 문제가
+                        발생.Tailwind CSS는 빌드 과정에서 동적으로 생성된
+                        클래스를 인식하지 못하는 것이 원인.
+                      </p>
+                    </li>
+                    <li>
+                      <div className=" pb-4 pt-4 mb-4">
+                        <img
+                          src={solved_01}
+                          alt="문제 해결 gif"
+                          className="w-full border-3 border-customBeige"
+                        />
+                      </div>
+                      <p className="">
+                        해결 방법
+                        <br /> classnames 라이브러리를 사용하여 가능한 클래스를
+                        미리 정의하고, 동적으로 생성되는 클래스 이름을 정적으로
+                        정의된 클래스 이름으로 대체. 이로써 Tailwind CSS가
+                        클래스를 올바르게 분석하고 CSS를 생성할 수 있게 됨
                       </p>
                     </li>
                   </ul>
@@ -173,9 +222,9 @@ export default function Interactive() {
                 느낀점 🤓
               </h2>
               <p className="text-[1.4rem] text-gray-700 mb-20 leading-[2.6rem] gap-4 inline-block">
-                기존 포트폴리오가 정적인 느낌이 강해 아쉬움이 있었다. 다시
-                개발하길 잘 했다는 생각이 들었고, 애정이 훨씬 간다. 꾸준히
-                추가하고, 디벨롭 할 예정이다.
+                동적인 요소를 가미해 포트폴리오를 만드니, 스스로 즐거움을 많이
+                느꼈다. 사실 이전에 만든 포트폴리오가 있었는데, 그것 보다 훨씬
+                애정이 간다. 꾸준히 추가하고, 디벨롭 할 예정이다.
                 <img src="/construction.gif" />
               </p>
             </div>

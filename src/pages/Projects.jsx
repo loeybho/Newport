@@ -19,14 +19,14 @@ const projects = [
   },
   {
     id: 2,
-    title: "WanderLens",
+    title: "인터랙티브 포트폴리오",
     description:
-      "방문했던 여행지의 사진을 모은 웹사이트입니다. 구글 지도 API를 활용하여 지도를 띄우고, 반응형 디자인을 적용했습니다.",
-    imageSrc: wanderlens,
+      "현 포트폴리오 웹사이트 입니다. GSAP, framer-motion등의 라이브러리를 사용하여 보다 동적인 화면을 구현했습니다.",
+    imageSrc: resume,
     altText: "카공여지도 광고 이미지",
-    techStack: ["React", "Tailwind CSS"],
-    link: "/projects/wanderlens",
-    hoverColor: "hover:bg-customLightGray",
+    techStack: ["React", "GSAP", "Framer-Motion", "Lenis"],
+    link: "/projects/interactive",
+    hoverColor: "hover:bg-customLightYellow",
   },
   {
     id: 3,
@@ -39,17 +39,16 @@ const projects = [
     link: "/projects/nextmovies",
     hoverColor: "hover:bg-customBlue",
   },
-
   {
     id: 4,
-    title: "인터랙티브 포트폴리오",
+    title: "WanderLens",
     description:
-      "현 포트폴리오 웹사이트 입니다. GSAP, framer-motion등의 라이브러리를 사용하여 보다 동적인 화면을 구현했습니다.",
-    imageSrc: resume,
+      "방문했던 여행지의 사진을 모은 웹사이트입니다. 구글 지도 API를 활용하여 지도를 띄우고, 반응형 디자인을 적용했습니다.",
+    imageSrc: wanderlens,
     altText: "카공여지도 광고 이미지",
-    techStack: ["React", "GSAP", "Framer-Motion", "Lenis"],
-    link: "/projects/interactive",
-    hoverColor: "hover:bg-customLightYellow",
+    techStack: ["React", "Tailwind CSS"],
+    link: "/projects/wanderlens",
+    hoverColor: "hover:bg-customLightGray",
   },
 ];
 

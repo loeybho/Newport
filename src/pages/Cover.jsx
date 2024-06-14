@@ -2,6 +2,7 @@ import Button from "@components/Button";
 import AboutMe from "@pages/AboutMe";
 import Projects from "@pages/Projects";
 import Skillset from "@pages/Skillset";
+import ToyProjects from "@pages/ToyProjects";
 
 import { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
@@ -135,6 +136,7 @@ export default function Cover() {
       <div id="projects">
         <Projects />
       </div>
+      <ToyProjects />
     </>
   );
 }
